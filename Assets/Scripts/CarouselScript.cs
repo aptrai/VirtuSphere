@@ -2,10 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-/// <summary>
-/// Manages the UI Scroll View to function as a responsive image carousel.
-/// Handles page navigation via buttons and updates the visual page indicators.
-/// </summary>
+
 public class CarouselManager : MonoBehaviour
 {
     [Header("Core UI Components")]
@@ -24,7 +21,6 @@ public class CarouselManager : MonoBehaviour
     [Tooltip("The speed at which the content moves between pages.")]
     public float scrollSpeed = 10f;
 
-    // --- Private State Variables ---
     private List<GameObject> indicators = new List<GameObject>();
     private int pageCount = 0;
     private float pageWidth = 0f;
