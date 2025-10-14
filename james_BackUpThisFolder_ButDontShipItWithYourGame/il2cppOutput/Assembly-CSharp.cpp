@@ -146,7 +146,7 @@ struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
 struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26;
 struct CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094;
 struct CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860;
-struct CarouselObj_t4AD14C15B7EBDC1D2B975EC00D94406E5BC6778F;
+struct CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474;
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
 struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B;
 struct CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2;
@@ -191,7 +191,8 @@ struct Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF;
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 struct SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53;
 struct SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC;
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A;
+struct ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E;
+struct Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3;
 struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 struct Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99;
 struct String_t;
@@ -218,6 +219,7 @@ struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
 struct ReapplyDrivenProperties_t3482EA130A01FF7EE2EEFE37F66A5215D08CFE24;
 struct U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4;
 struct U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C;
+struct ScrollRectEvent_t812C011901E6101F2A0FFC34C66AC5F65C0DEC26;
 struct SliderEvent_t92A82EF6C62E15AF92B640FE2D960E877E8C6555;
 
 IL2CPP_EXTERN_C RuntimeClass* Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C_il2cpp_TypeInfo_var;
@@ -232,7 +234,9 @@ IL2CPP_EXTERN_C RuntimeClass* IXRInteractable_t094DA697CF40A061C2820FDE5B5838D08
 IL2CPP_EXTERN_C RuntimeClass* Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Pointer_t800EF2832B62E889AC9C182E3B18098AF220E32A_il2cpp_TypeInfo_var;
@@ -247,15 +251,19 @@ IL2CPP_EXTERN_C RuntimeClass* UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A96
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____646619EDC2FF29123281665C0C46633B44D57936C727A23B78F34FE2E866520E_FieldInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____C09D1CB63326B3292622120196177561A5E6AA9C0C047403AFC9356D26A91FDC_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____9E89A321074DC32F8CC7BB1EB29D61115FF50E028543A6DF12E060F36B2CE23D_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F50CE14F13CB90A579AD3F58D02DCB13760ED82539BF0F676A9AA65B7C5D975A_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral097F37F3ED2CFD2A42AD5A1A9DB967264145EEB3;
 IL2CPP_EXTERN_C String_t* _stringLiteral0BC7C5801980AE591057F623889B06C0D7FD554C;
 IL2CPP_EXTERN_C String_t* _stringLiteral0F52C788AC4796FE5841155F7DF3896E049C051E;
 IL2CPP_EXTERN_C String_t* _stringLiteral278DDA87522A9019A0147F14D54301096A99F2D1;
+IL2CPP_EXTERN_C String_t* _stringLiteral32189949CB1CA4A6EBB1A643EBE2DB69713D5407;
 IL2CPP_EXTERN_C String_t* _stringLiteralA852FE3BCFA60509BB6A26DB0CF77DFF88536BDB;
+IL2CPP_EXTERN_C String_t* _stringLiteralA87494629332443BCB190D1BE4733B86174C509D;
 IL2CPP_EXTERN_C String_t* _stringLiteralBEF1F71BD3C21C53860EC6863B3105336E4D873B;
+IL2CPP_EXTERN_C String_t* _stringLiteralC0A19AE92FE495996EAEA2F2A069076E9D3CC713;
 IL2CPP_EXTERN_C String_t* _stringLiteralCF49A3A156338B04F88DE9CA65E316E5C5A5637B;
+IL2CPP_EXTERN_C String_t* _stringLiteralDBE3DC737BEB686130E852055CFC2983B739DB63;
 IL2CPP_EXTERN_C const RuntimeMethod* ARTemplateMenuManager_DeleteFocusedObject_m219BEF7232C17FFCCF3D2C0C6AD61D22C88FF986_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ARTemplateMenuManager_OnPlaneChanged_m6884F02F5592C451C00E348FD5EA3461B6C9CF3D_RuntimeMethod_var;
@@ -278,15 +286,20 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_TryGetComponent_TisRectTransform
 IL2CPP_EXTERN_C const RuntimeMethod* GoalManager_OnObjectSpawned_mD94584027BB62B5AF166EB87C98142E3279A76B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m8EE4758FF28E491A8B62E8583FF69767EE64ACE3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m0572296BB7CA147FC5AC55DB16EE0E4B62B5E259_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m52973C491707C18E4CA955980CAAD5D5DF8F0E1D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m68F7B8E1B45D36C458F3914DDC34EF53F2E85329_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m029B6DAB4E2E350E9379B6FE2DB309EF178358CB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m3100C9BC361715AD4BF658FECEE4BD117A9E0AA4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m46F44797A12AE050293C752DF0B023F5824B5255_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m4C37ED2D928D63B80F55AF434730C2D64EEB9F22_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB0B166304E682F1E43DA95A25A33CBD5CCB22799_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m4A35AFA304127D969BED5D3A681A8AB50CF89AF2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m4A9E0BC10A93BCAE5E011A5A2AC378B92C00C8A7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Clear_m1177D59BBD477C4015B272C1E3DD772053E14217_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Dequeue_m58A5067B261D533708910905BB3FC77173816768_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_RuntimeMethod_var;
@@ -520,6 +533,10 @@ struct Color_tD001788D726C3A7F1379BEED0260B9591F440C1F
 	float ___b;
 	float ___a;
 };
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	double ___m_value;
+};
 struct DrivenRectTransformTracker_tFB0706C933E3C68E4F377C204FCEEF091F1EE0B1 
 {
 	union
@@ -695,7 +712,7 @@ struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : 
 	float ___m_Seconds;
 };
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D303_t83496021AB3B130532F4795A9873FAA5901FD7B9 
+struct __StaticArrayInitTypeSizeU3D307_tDDE65AEA0506759600A2D407153AC1A521B103E0 
 {
 	union
 	{
@@ -705,12 +722,12 @@ struct __StaticArrayInitTypeSizeU3D303_t83496021AB3B130532F4795A9873FAA5901FD7B9
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D303_t83496021AB3B130532F4795A9873FAA5901FD7B9__padding[303];
+		uint8_t __StaticArrayInitTypeSizeU3D307_tDDE65AEA0506759600A2D407153AC1A521B103E0__padding[307];
 	};
 };
 #pragma pack(pop, tp)
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D475_t97D4CEB6A391E7043581297FA7F93AA921FA4AF6 
+struct __StaticArrayInitTypeSizeU3D478_tB43B2B97714294F1C81E850A2E975115361E7C7B 
 {
 	union
 	{
@@ -720,7 +737,7 @@ struct __StaticArrayInitTypeSizeU3D475_t97D4CEB6A391E7043581297FA7F93AA921FA4AF6
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D475_t97D4CEB6A391E7043581297FA7F93AA921FA4AF6__padding[475];
+		uint8_t __StaticArrayInitTypeSizeU3D478_tB43B2B97714294F1C81E850A2E975115361E7C7B__padding[478];
 	};
 };
 #pragma pack(pop, tp)
@@ -790,6 +807,11 @@ struct TweenableVariableBase_1_tE056BE2293DB2624363EEADF82A5A9439C26C35D  : publ
 struct Allocator_t996642592271AAD9EE688F142741D512C07B5824 
 {
 	int32_t ___value__;
+};
+struct Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Center;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Extents;
 };
 struct ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 
 {
@@ -1010,6 +1032,14 @@ struct DeviceFlags_tF02F85DA24FF16879A67B540FCA560EC955CE728
 	int32_t ___value__;
 };
 struct Mode_t2D49D0E10E2FDA0026278C2400C16033888D0542 
+{
+	int32_t ___value__;
+};
+struct MovementType_t35B76DF2E479A4C67D7768854404EFB47BF1BBB6 
+{
+	int32_t ___value__;
+};
+struct ScrollbarVisibility_t04A8B197CECE292E71BBB9145B1CA95BD450383E 
 {
 	int32_t ___value__;
 };
@@ -1629,18 +1659,6 @@ struct PrimitiveValue_t1CC37566F40746757D5E3F87474A05909D85C2D4_marshaled_com
 		};
 	};
 };
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
-{
-};
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
-{
-};
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
-{
-};
-struct Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
-{
-};
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
 };
@@ -1682,10 +1700,6 @@ struct XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0  : public 
 };
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
-};
-struct CarouselObj_t4AD14C15B7EBDC1D2B975EC00D94406E5BC6778F  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
-{
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___U3CFurniturePicU3Ek__BackingField;
 };
 struct Configuration_tF3E68F5793D5A997146A65AEAAC9B062BCAF0947 
 {
@@ -1903,6 +1917,19 @@ struct AxisControl_tD6613A2445A3C2BFA22C77E16CA3201AF72354A7  : public InputCont
 	bool ___scale;
 	float ___scaleFactor;
 };
+struct CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* ___scrollRect;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___content;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indicatorContainer;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicatorPrefab;
+	float ___scrollSpeed;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___indicators;
+	int32_t ___pageCount;
+	float ___pageWidth;
+	int32_t ___currentPageIndex;
+	float ___targetXPosition;
+};
 struct FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48  : public TweenableVariableAsyncBase_1_tF183EC63E8112FA406C601A7E49A5AC36036F088
 {
 };
@@ -2045,6 +2072,46 @@ struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931  : public UIBehaviour_t
 	TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4* ___m_ColorTweenRunner;
 	bool ___U3CuseLegacyMeshGenerationU3Ek__BackingField;
 };
+struct ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
+{
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_Content;
+	bool ___m_Horizontal;
+	bool ___m_Vertical;
+	int32_t ___m_MovementType;
+	float ___m_Elasticity;
+	bool ___m_Inertia;
+	float ___m_DecelerationRate;
+	float ___m_ScrollSensitivity;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_Viewport;
+	Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* ___m_HorizontalScrollbar;
+	Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* ___m_VerticalScrollbar;
+	int32_t ___m_HorizontalScrollbarVisibility;
+	int32_t ___m_VerticalScrollbarVisibility;
+	float ___m_HorizontalScrollbarSpacing;
+	float ___m_VerticalScrollbarSpacing;
+	ScrollRectEvent_t812C011901E6101F2A0FFC34C66AC5F65C0DEC26* ___m_OnValueChanged;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_PointerStartLocalCursor;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_ContentStartPosition;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_ViewRect;
+	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___m_ContentBounds;
+	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___m_ViewBounds;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_Velocity;
+	bool ___m_Dragging;
+	bool ___m_Scrolling;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_PrevPosition;
+	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___m_PrevContentBounds;
+	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___m_PrevViewBounds;
+	bool ___m_HasRebuiltLayout;
+	bool ___m_HSliderExpand;
+	bool ___m_VSliderExpand;
+	float ___m_HSliderHeight;
+	float ___m_VSliderWidth;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_Rect;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_HorizontalScrollbarRect;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_VerticalScrollbarRect;
+	DrivenRectTransformTracker_tFB0706C933E3C68E4F377C204FCEEF091F1EE0B1 ___m_Tracker;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_Corners;
+};
 struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
 {
 	bool ___m_EnableCalled;
@@ -2171,8 +2238,8 @@ struct ReadOnlyList_1_t11A7E2B2381E52652C09E41FC8CEBB0675A2E801_StaticFields
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D475_t97D4CEB6A391E7043581297FA7F93AA921FA4AF6 ___646619EDC2FF29123281665C0C46633B44D57936C727A23B78F34FE2E866520E;
-	__StaticArrayInitTypeSizeU3D303_t83496021AB3B130532F4795A9873FAA5901FD7B9 ___C09D1CB63326B3292622120196177561A5E6AA9C0C047403AFC9356D26A91FDC;
+	__StaticArrayInitTypeSizeU3D478_tB43B2B97714294F1C81E850A2E975115361E7C7B ___9E89A321074DC32F8CC7BB1EB29D61115FF50E028543A6DF12E060F36B2CE23D;
+	__StaticArrayInitTypeSizeU3D307_tDDE65AEA0506759600A2D407153AC1A521B103E0 ___F50CE14F13CB90A579AD3F58D02DCB13760ED82539BF0F676A9AA65B7C5D975A;
 };
 struct String_t_StaticFields
 {
@@ -2398,6 +2465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Clear_m1177D59BBD477C4015B272C1E3DD772053E14217_gshared (Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1__ctor_m8244F25246970E6C4496CB7FC78FF1C5A9D41CD8_gshared (Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_gshared (Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* __this, Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m75BF3B0A3747B60491845FA41612FE7F795F0A59_gshared (RuntimeObject* ___0_original, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parent, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenableVariableAsyncBase_1_Dispose_m8302D545AD62EB13A85B639B2E21FB71843F0CE0_gshared (TweenableVariableAsyncBase_1_tF183EC63E8112FA406C601A7E49A5AC36036F088* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791_gshared (TweenableVariableBase_1_tE056BE2293DB2624363EEADF82A5A9439C26C35D* __this, float ___0_tweenTarget, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TweenableVariableAsyncBase_1_get_Value_m5DAFDAB70CA05D176B1C3158F7485F8162F3E8FC_gshared (TweenableVariableAsyncBase_1_tF183EC63E8112FA406C601A7E49A5AC36036F088* __this, const RuntimeMethod* method) ;
@@ -2649,14 +2717,44 @@ inline void List_1__ctor_m029B6DAB4E2E350E9379B6FE2DB309EF178358CB (List_1_t2C3F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ScrollRect_get_viewport_m85092216DD476F77E78F5CE50F9C4E70063ECCF9_inline (ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_SetupIndicators_m2C879D35D3925E44A126757B8D73EAB683CD6DBA (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335 (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
+inline void List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, const RuntimeMethod*))List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline)(__this, method);
+}
+inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_original, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parent, const RuntimeMethod* method)
+{
+	return ((  GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m75BF3B0A3747B60491845FA41612FE7F795F0A59_gshared)(___0_original, ___1_parent, method);
+}
+inline void List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) ;
+inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979 (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, int32_t ___0_index, const RuntimeMethod* method)
+{
+	return ((  GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, String_t* ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_SetTargetPosition_m55B4255BB45F6C74C5BB10C25F8925AAB3B6F33A (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, int32_t ___0_pageIndex, const RuntimeMethod* method) ;
+inline void List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_Loading_m39E48A0F29404D7FCDB33A0C70763C3AADD73B41 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5__ctor_m3A364611F9006E4B60588F25B0DE38B3F0DAC3B7 (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1 (int32_t ___0_sceneBuildIndex, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7__ctor_m9869DE439BC8D5CD343B5777E5F04AC4C60E6144 (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CanvasGroup_get_alpha_mBFEA193D2886B27CC53B31F90F7A1659B67ED6DF (CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F (CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_FadeOut_m78BE1B6BAE61FAE072223FE3A38B0FDE9CB3D295 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) ;
@@ -2707,276 +2805,276 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90460
+// Method Definition Index: 90295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ARTemplateMenuManager_get_createButton_mF094F0AC7A89F9C92C57D8517519509825A145E4 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:27>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:27>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_CreateButton;
 		return L_0;
 	}
 }
-// Method Definition Index: 90461
+// Method Definition Index: 90296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_createButton_mD65905DD827D87E747095FDAF9CE38892C4340EB (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:28>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:28>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_value;
 		__this->___m_CreateButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CreateButton), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90462
+// Method Definition Index: 90297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ARTemplateMenuManager_get_deleteButton_m46B6C449536FDB847A381CF8A413C57B282051E0 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:40>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:40>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_DeleteButton;
 		return L_0;
 	}
 }
-// Method Definition Index: 90463
+// Method Definition Index: 90298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_deleteButton_m577A0287A455DE8E1C2CA097F6AA0054303EA1C2 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:41>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:41>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_value;
 		__this->___m_DeleteButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DeleteButton), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90464
+// Method Definition Index: 90299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ARTemplateMenuManager_get_objectMenu_mCB27454F48D1B98B7347C9531D7E0946537B4980 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:53>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:53>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ObjectMenu;
 		return L_0;
 	}
 }
-// Method Definition Index: 90465
+// Method Definition Index: 90300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_objectMenu_m7A260365DEBA0D7C382E73E86EE252A935FFE237 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:54>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:54>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_ObjectMenu = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectMenu), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90466
+// Method Definition Index: 90301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ARTemplateMenuManager_get_modalMenu_m72D3BE2FB3C25795B298281C866C8EBFC3E4BCB6 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:66>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:66>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ModalMenu;
 		return L_0;
 	}
 }
-// Method Definition Index: 90467
+// Method Definition Index: 90302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_modalMenu_mC1CC338235FDC42D769E0A27E8F0580034A6D469 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:67>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:67>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_ModalMenu = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ModalMenu), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90468
+// Method Definition Index: 90303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ARTemplateMenuManager_get_objectMenuAnimator_m39DF1D846C248E366E7FF880E71399F8800E27F4 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:79>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:79>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___m_ObjectMenuAnimator;
 		return L_0;
 	}
 }
-// Method Definition Index: 90469
+// Method Definition Index: 90304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_objectMenuAnimator_mA686BD3F397357AC2A0745D046D52F84ED3510FF (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:80>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:80>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = ___0_value;
 		__this->___m_ObjectMenuAnimator = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectMenuAnimator), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90470
+// Method Definition Index: 90305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* ARTemplateMenuManager_get_objectSpawner_mDE35E96ED7C9F257FE1399F950E955C69F58AB3A (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:92>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:92>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = __this->___m_ObjectSpawner;
 		return L_0;
 	}
 }
-// Method Definition Index: 90471
+// Method Definition Index: 90306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_objectSpawner_m2EA6A9759C3640ACEFDF57B7E089A657DE16B895 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:93>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:93>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = ___0_value;
 		__this->___m_ObjectSpawner = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectSpawner), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90472
+// Method Definition Index: 90307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ARTemplateMenuManager_get_cancelButton_mE59EAD8C60737CB4B834EFEC1563050D3E78B4E0 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:105>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:105>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_CancelButton;
 		return L_0;
 	}
 }
-// Method Definition Index: 90473
+// Method Definition Index: 90308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_cancelButton_m455D985BE6A8817FA26C52191498ECFE675CE4A5 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:106>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:106>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_value;
 		__this->___m_CancelButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CancelButton), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90474
+// Method Definition Index: 90309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInteractionGroup_tC4826C686618B4D279303C4A8CF660C39E8AE91C* ARTemplateMenuManager_get_interactionGroup_m58B8BBD95AAB3E312261A67B881B37827427F0E0 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:118>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:118>
 		XRInteractionGroup_tC4826C686618B4D279303C4A8CF660C39E8AE91C* L_0 = __this->___m_InteractionGroup;
 		return L_0;
 	}
 }
-// Method Definition Index: 90475
+// Method Definition Index: 90310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_interactionGroup_mBE2F702DB790C6088482C128DD3A9897BC138F44 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, XRInteractionGroup_tC4826C686618B4D279303C4A8CF660C39E8AE91C* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:119>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:119>
 		XRInteractionGroup_tC4826C686618B4D279303C4A8CF660C39E8AE91C* L_0 = ___0_value;
 		__this->___m_InteractionGroup = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InteractionGroup), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90476
+// Method Definition Index: 90311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* ARTemplateMenuManager_get_debugPlaneSlider_m3241EE6F6553F268C3AC39CF54D9A5ED54EF7A26 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:131>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:131>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_0 = __this->___m_DebugPlaneSlider;
 		return L_0;
 	}
 }
-// Method Definition Index: 90477
+// Method Definition Index: 90312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_debugPlaneSlider_m0CBEC391DA16A3823FD98F3C7C64CEB37CD72C5A (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:132>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:132>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_0 = ___0_value;
 		__this->___m_DebugPlaneSlider = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DebugPlaneSlider), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90478
+// Method Definition Index: 90313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ARTemplateMenuManager_get_debugPlane_m6B8A7905AD88C33FF032205B3B47050E931BB149 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:144>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:144>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_DebugPlane;
 		return L_0;
 	}
 }
-// Method Definition Index: 90479
+// Method Definition Index: 90314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_debugPlane_mE8BDDAC580A6A84FAEF7FE2EB615AD998AA75DE3 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:145>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:145>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_DebugPlane = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DebugPlane), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90480
+// Method Definition Index: 90315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* ARTemplateMenuManager_get_planeManager_m78E1DB9789019091AFAE7CFBAF74C8482AEB7E00 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:157>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:157>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_0 = __this->___m_PlaneManager;
 		return L_0;
 	}
 }
-// Method Definition Index: 90481
+// Method Definition Index: 90316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_planeManager_m2F4C3281AEDA989FAA204775845E1DDC27BBB1AD (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:158>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:158>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_0 = ___0_value;
 		__this->___m_PlaneManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PlaneManager), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90482
+// Method Definition Index: 90317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* ARTemplateMenuManager_get_debugMenu_m47276820E62418810287E12A84142EAADB9A24C6 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:170>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:170>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_0 = __this->___m_DebugMenu;
 		return L_0;
 	}
 }
-// Method Definition Index: 90483
+// Method Definition Index: 90318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_debugMenu_m69BBE1F05F300FA0D52D6D2890AA3E95098D52B4 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:171>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:171>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_0 = ___0_value;
 		__this->___m_DebugMenu = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DebugMenu), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90484
+// Method Definition Index: 90319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* ARTemplateMenuManager_get_debugMenuSlider_mCCB0F3B7E550218407509E28E34A0AF13F1D36E6 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:183>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:183>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_0 = __this->___m_DebugMenuSlider;
 		return L_0;
 	}
 }
-// Method Definition Index: 90485
+// Method Definition Index: 90320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_debugMenuSlider_m281B5A94AE6A0ACD062CC8E1D2E62AEF86132F89 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:184>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:184>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_0 = ___0_value;
 		__this->___m_DebugMenuSlider = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DebugMenuSlider), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90486
+// Method Definition Index: 90321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* ARTemplateMenuManager_get_tapStartPositionInput_m0CAE417D2B1802DF421DBFF726A564FB0D207738 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:196>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:196>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_0 = __this->___m_TapStartPositionInput;
 		return L_0;
 	}
 }
-// Method Definition Index: 90487
+// Method Definition Index: 90322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_tapStartPositionInput_mF3D25BD96079105ACF3CE492132EF483B4F11BF7 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2986,23 +3084,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_tapStartPositi
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:197>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:197>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0** L_0 = (XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0**)(&__this->___m_TapStartPositionInput);
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_1 = ___0_value;
 		XRInputReaderUtility_SetInputProperty_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m0EF1C2CE77396319306FA2662E25B16EFC6074D2(L_0, L_1, __this, XRInputReaderUtility_SetInputProperty_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m0EF1C2CE77396319306FA2662E25B16EFC6074D2_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 90488
+// Method Definition Index: 90323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* ARTemplateMenuManager_get_dragCurrentPositionInput_mA43D17FF4C91FB6FB99F89D97A2914E474BE3870 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:209>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:209>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_0 = __this->___m_DragCurrentPositionInput;
 		return L_0;
 	}
 }
-// Method Definition Index: 90489
+// Method Definition Index: 90324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_dragCurrentPositionInput_mC6673CDC734514E1C561F5B44418D3D2488248FF (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3012,14 +3110,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_set_dragCurrentPos
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:210>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:210>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0** L_0 = (XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0**)(&__this->___m_DragCurrentPositionInput);
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_1 = ___0_value;
 		XRInputReaderUtility_SetInputProperty_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m0EF1C2CE77396319306FA2662E25B16EFC6074D2(L_0, L_1, __this, XRInputReaderUtility_SetInputProperty_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m0EF1C2CE77396319306FA2662E25B16EFC6074D2_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 90490
+// Method Definition Index: 90325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCAC5BC7EC4E5D4ACEA88994921BD41632A (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3036,7 +3134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:226>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:226>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_CreateButton;
 		NullCheck(L_0);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_1;
@@ -3045,7 +3143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCA
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_2, __this, (intptr_t)((void*)ARTemplateMenuManager_ShowMenu_m369D6FEB4C85523EF7FAB62295215991973AA4E2_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_1, L_2, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:227>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:227>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___m_CancelButton;
 		NullCheck(L_3);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_4;
@@ -3054,7 +3152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCA
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_5, __this, (intptr_t)((void*)ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_4, L_5, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:228>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:228>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_6 = __this->___m_DeleteButton;
 		NullCheck(L_6);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_7;
@@ -3063,7 +3161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCA
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_8, __this, (intptr_t)((void*)ARTemplateMenuManager_DeleteFocusedObject_m219BEF7232C17FFCCF3D2C0C6AD61D22C88FF986_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_7, L_8, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:229>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:229>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_9 = __this->___m_PlaneManager;
 		NullCheck(L_9);
 		UnityEvent_1_tA0DC665B6E1CCE7CDDE0EAE36D2294234A30D998* L_10;
@@ -3072,11 +3170,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnEnable_mC7771FCA
 		UnityAction_1__ctor_mC73CD5C8E98548CEA3E87C2E1A14B1F2A825365E(L_11, __this, (intptr_t)((void*)ARTemplateMenuManager_OnPlaneChanged_m6884F02F5592C451C00E348FD5EA3461B6C9CF3D_RuntimeMethod_var), NULL);
 		NullCheck(L_10);
 		UnityEvent_1_AddListener_m0E7576A2A31A1FF338177623DF253203C943A44C(L_10, L_11, UnityEvent_1_AddListener_m0E7576A2A31A1FF338177623DF253203C943A44C_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:230>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:230>
 		return;
 	}
 }
-// Method Definition Index: 90491
+// Method Definition Index: 90326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7F77773FD577DC2F79D2862D2B10DF2E56 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3093,9 +3191,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:237>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:237>
 		__this->___m_ShowObjectMenu = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:238>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:238>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_CreateButton;
 		NullCheck(L_0);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_1;
@@ -3104,7 +3202,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_2, __this, (intptr_t)((void*)ARTemplateMenuManager_ShowMenu_m369D6FEB4C85523EF7FAB62295215991973AA4E2_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_1, L_2, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:239>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:239>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___m_CancelButton;
 		NullCheck(L_3);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_4;
@@ -3113,7 +3211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_5, __this, (intptr_t)((void*)ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_4, L_5, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:240>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:240>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_6 = __this->___m_DeleteButton;
 		NullCheck(L_6);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_7;
@@ -3122,7 +3220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_8, __this, (intptr_t)((void*)ARTemplateMenuManager_DeleteFocusedObject_m219BEF7232C17FFCCF3D2C0C6AD61D22C88FF986_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_7, L_8, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:241>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:241>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_9 = __this->___m_PlaneManager;
 		NullCheck(L_9);
 		UnityEvent_1_tA0DC665B6E1CCE7CDDE0EAE36D2294234A30D998* L_10;
@@ -3131,37 +3229,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnDisable_m18CE4A7
 		UnityAction_1__ctor_mC73CD5C8E98548CEA3E87C2E1A14B1F2A825365E(L_11, __this, (intptr_t)((void*)ARTemplateMenuManager_OnPlaneChanged_m6884F02F5592C451C00E348FD5EA3461B6C9CF3D_RuntimeMethod_var), NULL);
 		NullCheck(L_10);
 		UnityEvent_1_RemoveListener_m154FBBE6692205398C8FD29CFE58076BE2FE29E2(L_10, L_11, UnityEvent_1_RemoveListener_m154FBBE6692205398C8FD29CFE58076BE2FE29E2_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:242>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:242>
 		return;
 	}
 }
-// Method Definition Index: 90492
+// Method Definition Index: 90327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_Start_mBFBD7136ABF7AB801C955114B0243F84DC7CA10C (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:251>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:251>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_0 = __this->___m_DebugMenu;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_0, NULL);
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:252>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:252>
 		__this->___m_InitializingDebugMenu = (bool)1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:254>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:254>
 		ARTemplateMenuManager_InitializeDebugMenuOffsets_m1FBA6DC03F14FD4FE79210C87EE6AFDA431B1088(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:255>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:255>
 		ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:256>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:256>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_2 = __this->___m_PlaneManager;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___m_DebugPlane;
 		NullCheck(L_2);
 		ARPlaneManager_set_planePrefab_mC934904F4FA889CF92277D56CA268B3EB1149FB2_inline(L_2, L_3, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:257>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:257>
 		return;
 	}
 }
-// Method Definition Index: 90493
+// Method Definition Index: 90328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_Update_m2F6CAA07414DB7AAB06B2CB16E76B2859441A7FB (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3195,7 +3293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_Update_m2F6CAA0741
 	int32_t G_B30_0 = 0;
 	ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* G_B30_1 = NULL;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:264>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:264>
 		bool L_0 = __this->___m_InitializingDebugMenu;
 		if (!L_0)
 		{
@@ -3203,20 +3301,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_Update_m2F6CAA0741
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:266>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:266>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_1 = __this->___m_DebugMenu;
 		NullCheck(L_1);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_1, NULL);
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:267>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:267>
 		__this->___m_InitializingDebugMenu = (bool)0;
 	}
 
 IL_0020:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:270>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:270>
 		bool L_3 = __this->___m_ShowObjectMenu;
 		if (L_3)
 		{
@@ -3233,7 +3331,7 @@ IL_0020:
 
 IL_0033:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:272>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:272>
 		bool L_5 = __this->___m_IsPointerOverUI;
 		if (L_5)
 		{
@@ -3263,7 +3361,7 @@ IL_0033:
 
 IL_0059:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:274>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:274>
 		bool L_10 = __this->___m_ShowObjectMenu;
 		if (!L_10)
 		{
@@ -3271,13 +3369,13 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:275>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:275>
 		ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008(__this, NULL);
 	}
 
 IL_0067:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:277>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:277>
 		bool L_11 = __this->___m_ShowOptionsModal;
 		if (!L_11)
 		{
@@ -3285,7 +3383,7 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:278>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:278>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___m_ModalMenu;
 		NullCheck(L_12);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
@@ -3293,7 +3391,7 @@ IL_0067:
 
 IL_007b:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:281>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:281>
 		bool L_13 = __this->___m_ShowObjectMenu;
 		if (!L_13)
 		{
@@ -3301,7 +3399,7 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:283>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:283>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->___m_DeleteButton;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
@@ -3313,7 +3411,7 @@ IL_007b:
 
 IL_0096:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:287>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:287>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___m_DeleteButton;
 		NullCheck(L_16);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17;
@@ -3352,7 +3450,7 @@ IL_00b3:
 
 IL_00bb:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:290>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:290>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_21;
 		L_21 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -3393,16 +3491,16 @@ IL_00d7:
 
 IL_00de:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:294>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:294>
 		__this->___m_IsPointerOverUI = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:295>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:295>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = __this->___m_CreateButton;
 		NullCheck(L_25);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26;
 		L_26 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_25, NULL);
 		NullCheck(L_26);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_26, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:296>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:296>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_27 = __this->___m_DeleteButton;
 		NullCheck(L_27);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
@@ -3441,7 +3539,7 @@ IL_0113:
 
 IL_011b:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:299>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:299>
 		bool L_32 = __this->___m_IsPointerOverUI;
 		if (L_32)
 		{
@@ -3456,7 +3554,7 @@ IL_011b:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:301>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:301>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_34;
 		L_34 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -3496,11 +3594,11 @@ IL_0147:
 
 IL_014c:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:303>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:303>
 		return;
 	}
 }
-// Method Definition Index: 90494
+// Method Definition Index: 90329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_SetObjectToSpawn_m4083A5A5AB61A085289607F2B638777F9F4F1B78 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, int32_t ___0_objectIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3514,7 +3612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_SetObjectToSpawn_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:312>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:312>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = __this->___m_ObjectSpawner;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3525,7 +3623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_SetObjectToSpawn_m
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:314>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:314>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral097F37F3ED2CFD2A42AD5A1A9DB967264145EEB3, NULL);
 		goto IL_0045;
@@ -3533,7 +3631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_SetObjectToSpawn_m
 
 IL_001a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:318>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:318>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_2 = __this->___m_ObjectSpawner;
 		NullCheck(L_2);
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_3;
@@ -3548,7 +3646,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:320>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:320>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_6 = __this->___m_ObjectSpawner;
 		int32_t L_7 = ___0_objectIndex;
 		NullCheck(L_6);
@@ -3558,20 +3656,20 @@ IL_001a:
 
 IL_003b:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:324>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:324>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralA852FE3BCFA60509BB6A26DB0CF77DFF88536BDB, NULL);
 	}
 
 IL_0045:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:328>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:328>
 		ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:329>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:329>
 		return;
 	}
 }
-// Method Definition Index: 90495
+// Method Definition Index: 90330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowMenu_m369D6FEB4C85523EF7FAB62295215991973AA4E2 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3581,13 +3679,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowMenu_m369D6FEB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:333>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:333>
 		__this->___m_ShowObjectMenu = (bool)1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:334>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:334>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ObjectMenu;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:335>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:335>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->___m_ObjectMenuAnimator;
 		NullCheck(L_1);
 		bool L_2;
@@ -3598,7 +3696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowMenu_m369D6FEB
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:337>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:337>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_3 = __this->___m_ObjectMenuAnimator;
 		NullCheck(L_3);
 		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_3, _stringLiteralBEF1F71BD3C21C53860EC6863B3105336E4D873B, (bool)1, NULL);
@@ -3606,17 +3704,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowMenu_m369D6FEB
 
 IL_0036:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:339>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:339>
 		ARTemplateMenuManager_AdjustARDebugMenuPosition_m52180899C7BB59F438C6CAD03723F8EE9BC6C7F4(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:340>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:340>
 		return;
 	}
 }
-// Method Definition Index: 90496
+// Method Definition Index: 90331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideModal_m3E38F285103C648F70CE8A79ACF563E678F2F508 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:347>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:347>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ModalMenu;
 		NullCheck(L_0);
 		bool L_1;
@@ -3627,9 +3725,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideModal_m3E3
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:349>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:349>
 		__this->___m_ShowOptionsModal = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:350>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:350>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___m_ModalMenu;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -3638,21 +3736,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideModal_m3E3
 
 IL_0021:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:354>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:354>
 		__this->___m_ShowOptionsModal = (bool)1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:355>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:355>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___m_ModalMenu;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:357>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:357>
 		return;
 	}
 }
-// Method Definition Index: 90497
+// Method Definition Index: 90332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideDebugPlane_m35F3AD6BC87D7ED54D7E6DF0AA3021D971BBDFFA (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:364>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:364>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_0 = __this->___m_DebugPlaneSlider;
 		NullCheck(L_0);
 		float L_1;
@@ -3663,32 +3761,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideDebugPlane
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:366>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:366>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_2 = __this->___m_DebugPlaneSlider;
 		NullCheck(L_2);
 		VirtualActionInvoker1< float >::Invoke(47, L_2, (0.0f));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:367>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:367>
 		ARTemplateMenuManager_ChangePlaneVisibility_mD9D88DFA383A972C6C4352C86049FDEB9614DE2F(__this, (bool)0, NULL);
 		return;
 	}
 
 IL_002a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:371>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:371>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_3 = __this->___m_DebugPlaneSlider;
 		NullCheck(L_3);
 		VirtualActionInvoker1< float >::Invoke(47, L_3, (1.0f));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:372>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:372>
 		ARTemplateMenuManager_ChangePlaneVisibility_mD9D88DFA383A972C6C4352C86049FDEB9614DE2F(__this, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:374>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:374>
 		return;
 	}
 }
-// Method Definition Index: 90498
+// Method Definition Index: 90333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideDebugMenu_m08DA987A2472F73DE84EC83F5A6E82A795C5CC52 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:381>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:381>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_0 = __this->___m_DebugMenu;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -3702,11 +3800,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideDebugMenu_
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:383>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:383>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_3 = __this->___m_DebugMenuSlider;
 		NullCheck(L_3);
 		VirtualActionInvoker1< float >::Invoke(47, L_3, (0.0f));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:384>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:384>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_4 = __this->___m_DebugMenu;
 		NullCheck(L_4);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
@@ -3718,24 +3816,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ShowHideDebugMenu_
 
 IL_0034:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:388>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:388>
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_6 = __this->___m_DebugMenuSlider;
 		NullCheck(L_6);
 		VirtualActionInvoker1< float >::Invoke(47, L_6, (1.0f));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:389>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:389>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_7 = __this->___m_DebugMenu;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
 		L_8 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_7, NULL);
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:390>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:390>
 		ARTemplateMenuManager_AdjustARDebugMenuPosition_m52180899C7BB59F438C6CAD03723F8EE9BC6C7F4(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:392>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:392>
 		return;
 	}
 }
-// Method Definition Index: 90499
+// Method Definition Index: 90334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ClearAllObjects_m80D86FF91F43887181D26B168100A940297D1B3C (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3750,7 +3848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ClearAllObjects_m8
 	RuntimeObject* V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = __this->___m_ObjectSpawner;
 		NullCheck(L_0);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
@@ -3795,12 +3893,12 @@ IL_0042:
 
 IL_0013_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
 				RuntimeObject* L_6 = V_0;
 				NullCheck(L_6);
 				RuntimeObject* L_7;
 				L_7 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_6);
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:401>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:401>
 				NullCheck(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_7, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)));
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
 				L_8 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_7, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)), NULL);
@@ -3810,7 +3908,7 @@ IL_0013_1:
 
 IL_0028_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:399>
 				RuntimeObject* L_9 = V_0;
 				NullCheck(L_9);
 				bool L_10;
@@ -3832,11 +3930,11 @@ IL_0028_1:
 
 IL_0043:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:403>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:403>
 		return;
 	}
 }
-// Method Definition Index: 90500
+// Method Definition Index: 90335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_HideMenu_mF42974780FFDCCDF4CE60CA4D9FC4B1683130008 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3846,19 +3944,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_HideMenu_mF4297478
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:410>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:410>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___m_ObjectMenuAnimator;
 		NullCheck(L_0);
 		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_0, _stringLiteralBEF1F71BD3C21C53860EC6863B3105336E4D873B, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:411>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:411>
 		__this->___m_ShowObjectMenu = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:412>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:412>
 		ARTemplateMenuManager_AdjustARDebugMenuPosition_m52180899C7BB59F438C6CAD03723F8EE9BC6C7F4(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:413>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:413>
 		return;
 	}
 }
-// Method Definition Index: 90501
+// Method Definition Index: 90336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ChangePlaneVisibility_mD9D88DFA383A972C6C4352C86049FDEB9614DE2F (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, bool ___0_setVisible, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3871,20 +3969,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_ChangePlaneVisibil
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:417>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:417>
 		List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_0 = __this->___featheredPlaneMeshVisualizerCompanions;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m46F44797A12AE050293C752DF0B023F5824B5255_inline(L_0, List_1_get_Count_m46F44797A12AE050293C752DF0B023F5824B5255_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
 		V_1 = 0;
 		goto IL_0026;
 	}
 
 IL_0010:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:420>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:420>
 		List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_2 = __this->___featheredPlaneMeshVisualizerCompanions;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -3893,14 +3991,14 @@ IL_0010:
 		bool L_5 = ___0_setVisible;
 		NullCheck(L_4);
 		ARFeatheredPlaneMeshVisualizerCompanion_set_visualizeSurfaces_m7A7F198C97A315F6F7F58F0BDA5269863F098D68(L_4, L_5, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
 		int32_t L_6 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
 IL_0026:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:418>
 		int32_t L_7 = V_1;
 		int32_t L_8 = V_0;
 		if ((((int32_t)L_7) < ((int32_t)L_8)))
@@ -3909,11 +4007,11 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:422>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:422>
 		return;
 	}
 }
-// Method Definition Index: 90502
+// Method Definition Index: 90337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_DeleteFocusedObject_m219BEF7232C17FFCCF3D2C0C6AD61D22C88FF986 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3925,13 +4023,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_DeleteFocusedObjec
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:426>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:426>
 		XRInteractionGroup_tC4826C686618B4D279303C4A8CF660C39E8AE91C* L_0 = __this->___m_InteractionGroup;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = XRInteractionGroup_get_focusInteractable_m1EAC5783216B14458479D0E43708E18A8CE95A61_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:427>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:427>
 		RuntimeObject* L_2 = V_0;
 		if (!L_2)
 		{
@@ -3939,7 +4037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_DeleteFocusedObjec
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:429>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:429>
 		RuntimeObject* L_3 = V_0;
 		NullCheck(L_3);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
@@ -3953,11 +4051,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_DeleteFocusedObjec
 
 IL_001f:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:431>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:431>
 		return;
 	}
 }
-// Method Definition Index: 90503
+// Method Definition Index: 90338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_InitializeDebugMenuOffsets_m1FBA6DC03F14FD4FE79210C87EE6AFDA431B1088 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3972,7 +4070,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_InitializeDebugMen
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:435>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:435>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___m_CreateButton;
 		NullCheck(L_0);
 		bool L_1;
@@ -3983,7 +4081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_InitializeDebugMen
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:436>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:436>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_2 = V_0;
 		NullCheck(L_2);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
@@ -4005,7 +4103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_InitializeDebugMen
 
 IL_0041:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:438>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:438>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_9), (0.0f), (200.0f), NULL);
@@ -4014,7 +4112,7 @@ IL_0041:
 
 IL_0056:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:440>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:440>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___m_ObjectMenu;
 		NullCheck(L_10);
 		bool L_11;
@@ -4025,7 +4123,7 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:441>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:441>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12 = V_1;
 		NullCheck(L_12);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
@@ -4047,16 +4145,16 @@ IL_0056:
 
 IL_0096:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:443>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:443>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19;
 		memset((&L_19), 0, sizeof(L_19));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_19), (0.0f), (345.0f), NULL);
 		__this->___m_ObjectMenuOffset = L_19;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:444>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:444>
 		return;
 	}
 }
-// Method Definition Index: 90504
+// Method Definition Index: 90339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_AdjustARDebugMenuPosition_m52180899C7BB59F438C6CAD03723F8EE9BC6C7F4 (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4080,19 +4178,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_AdjustARDebugMenuP
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 G_B4_0;
 	memset((&G_B4_0), 0, sizeof(G_B4_0));
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:448>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:448>
 		int32_t L_0;
 		L_0 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		float L_1;
 		L_1 = Screen_get_dpi_mEEDAA2189F84A47BD69D62A611E031D5C59CFE8E(NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:450>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:450>
 		if ((!(((float)((float)(((float)L_0)/L_1))) < ((float)(5.0f)))))
 		{
 			goto IL_0362;
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:452>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:452>
 		bool L_2 = __this->___m_ShowObjectMenu;
 		if (L_2)
 		{
@@ -4114,7 +4212,7 @@ IL_0026:
 IL_002c:
 	{
 		V_0 = G_B4_0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:454>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:454>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_5 = __this->___m_DebugMenu;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
@@ -4128,21 +4226,21 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:456>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:456>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = V_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_9), (0.5f), (0.0f), NULL);
 		NullCheck(L_8);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_8, L_9, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:457>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:457>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_10 = V_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11;
 		memset((&L_11), 0, sizeof(L_11));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_11), (0.5f), (0.0f), NULL);
 		NullCheck(L_10);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_10, L_11, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:458>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:458>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12 = V_1;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_13 = V_1;
 		NullCheck(L_13);
@@ -4159,7 +4257,7 @@ IL_002c:
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_19), L_15, L_18, (90.0f), NULL);
 		NullCheck(L_12);
 		Transform_set_eulerAngles_m9F0BC484A7915A51FAB87230644229B75BACA004(L_12, L_19, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:459>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:459>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_20 = V_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21;
 		memset((&L_21), 0, sizeof(L_21));
@@ -4173,7 +4271,7 @@ IL_002c:
 
 IL_00ac:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:462>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:462>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_24 = __this->___m_DebugMenu;
 		NullCheck(L_24);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25;
@@ -4187,7 +4285,7 @@ IL_00ac:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:463>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:463>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_27 = V_2;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_28 = V_2;
 		NullCheck(L_28);
@@ -4208,7 +4306,7 @@ IL_00ac:
 
 IL_00e6:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:465>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:465>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_35 = __this->___m_DebugMenu;
 		NullCheck(L_35);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_36;
@@ -4222,7 +4320,7 @@ IL_00e6:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:466>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:466>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_38 = V_3;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_39 = V_3;
 		NullCheck(L_39);
@@ -4243,7 +4341,7 @@ IL_00e6:
 
 IL_0120:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:468>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:468>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_46 = __this->___m_DebugMenu;
 		NullCheck(L_46);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_47;
@@ -4257,7 +4355,7 @@ IL_0120:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:469>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:469>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_49 = V_4;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_50 = V_4;
 		NullCheck(L_50);
@@ -4278,7 +4376,7 @@ IL_0120:
 
 IL_015d:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:471>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:471>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_57 = __this->___m_DebugMenu;
 		NullCheck(L_57);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_58;
@@ -4292,7 +4390,7 @@ IL_015d:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:472>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:472>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_60 = V_5;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_61 = V_5;
 		NullCheck(L_61);
@@ -4313,7 +4411,7 @@ IL_015d:
 
 IL_019a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:474>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:474>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_68 = __this->___m_DebugMenu;
 		NullCheck(L_68);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_69;
@@ -4327,28 +4425,28 @@ IL_019a:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:476>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:476>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_71 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_72;
 		memset((&L_72), 0, sizeof(L_72));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_72), (0.5f), (0.0f), NULL);
 		NullCheck(L_71);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_71, L_72, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:477>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:477>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_73 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_74;
 		memset((&L_74), 0, sizeof(L_74));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_74), (0.5f), (0.0f), NULL);
 		NullCheck(L_73);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_73, L_74, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:478>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:478>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_75 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_76;
 		memset((&L_76), 0, sizeof(L_76));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_76), (0.5f), (0.0f), NULL);
 		NullCheck(L_75);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_75, L_76, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:479>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:479>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_77 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_78;
 		memset((&L_78), 0, sizeof(L_78));
@@ -4362,7 +4460,7 @@ IL_019a:
 
 IL_020c:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:482>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:482>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_81 = __this->___m_DebugMenu;
 		NullCheck(L_81);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_82;
@@ -4376,28 +4474,28 @@ IL_020c:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:484>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:484>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_84 = V_7;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_85;
 		memset((&L_85), 0, sizeof(L_85));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_85), (0.5f), (0.0f), NULL);
 		NullCheck(L_84);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_84, L_85, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:485>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:485>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_86 = V_7;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_87;
 		memset((&L_87), 0, sizeof(L_87));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_87), (0.5f), (0.0f), NULL);
 		NullCheck(L_86);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_86, L_87, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:486>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:486>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_88 = V_7;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_89;
 		memset((&L_89), 0, sizeof(L_89));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_89), (0.5f), (0.0f), NULL);
 		NullCheck(L_88);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_88, L_89, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:487>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:487>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_90 = V_7;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_91;
 		memset((&L_91), 0, sizeof(L_91));
@@ -4411,7 +4509,7 @@ IL_020c:
 
 IL_027e:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:490>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:490>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_94 = __this->___m_DebugMenu;
 		NullCheck(L_94);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_95;
@@ -4425,28 +4523,28 @@ IL_027e:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:492>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:492>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_97 = V_8;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_98;
 		memset((&L_98), 0, sizeof(L_98));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_98), (0.5f), (0.0f), NULL);
 		NullCheck(L_97);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_97, L_98, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:493>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:493>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_99 = V_8;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_100;
 		memset((&L_100), 0, sizeof(L_100));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_100), (0.5f), (0.0f), NULL);
 		NullCheck(L_99);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_99, L_100, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:494>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:494>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_101 = V_8;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_102;
 		memset((&L_102), 0, sizeof(L_102));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_102), (0.5f), (0.0f), NULL);
 		NullCheck(L_101);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_101, L_102, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:495>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:495>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_103 = V_8;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_104;
 		memset((&L_104), 0, sizeof(L_104));
@@ -4460,7 +4558,7 @@ IL_027e:
 
 IL_02f0:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:498>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:498>
 		ARDebugMenu_t6C30A780EA1B4AFEE8BDAE632CF7897AC044F271* L_107 = __this->___m_DebugMenu;
 		NullCheck(L_107);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_108;
@@ -4474,28 +4572,28 @@ IL_02f0:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:500>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:500>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_110 = V_9;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_111;
 		memset((&L_111), 0, sizeof(L_111));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_111), (0.5f), (0.0f), NULL);
 		NullCheck(L_110);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_110, L_111, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:501>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:501>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_112 = V_9;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_113;
 		memset((&L_113), 0, sizeof(L_113));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_113), (0.5f), (0.0f), NULL);
 		NullCheck(L_112);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_112, L_113, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:502>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:502>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_114 = V_9;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_115;
 		memset((&L_115), 0, sizeof(L_115));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_115), (0.5f), (0.0f), NULL);
 		NullCheck(L_114);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_114, L_115, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:503>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:503>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_116 = V_9;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_117;
 		memset((&L_117), 0, sizeof(L_117));
@@ -4509,11 +4607,11 @@ IL_02f0:
 
 IL_0362:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:506>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:506>
 		return;
 	}
 }
-// Method Definition Index: 90505
+// Method Definition Index: 90340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnPlaneChanged_m6884F02F5592C451C00E348FD5EA3461B6C9CF3D (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, ARTrackablesChangedEventArgs_1_tEB03975F0BB8E8FF1B5EDAE64BB7F40F4C194FEC ___0_eventArgs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4559,7 +4657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnPlaneChanged_m68
 	memset((&V_6), 0, sizeof(V_6));
 	ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* V_7 = NULL;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:510>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:510>
 		ReadOnlyList_1_tAD2B36DC226E32782EDF527D5E5702E48CB7D476* L_0;
 		L_0 = ARTrackablesChangedEventArgs_1_get_added_m2CE7C7AE5B3986DC318625D88490B36F8E4D9664_inline((&___0_eventArgs), ARTrackablesChangedEventArgs_1_get_added_m2CE7C7AE5B3986DC318625D88490B36F8E4D9664_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -4571,7 +4669,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager_OnPlaneChanged_m68
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
 		ReadOnlyList_1_tAD2B36DC226E32782EDF527D5E5702E48CB7D476* L_2;
 		L_2 = ARTrackablesChangedEventArgs_1_get_added_m2CE7C7AE5B3986DC318625D88490B36F8E4D9664_inline((&___0_eventArgs), ARTrackablesChangedEventArgs_1_get_added_m2CE7C7AE5B3986DC318625D88490B36F8E4D9664_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -4597,10 +4695,10 @@ FINALLY_0060:
 
 IL_001e_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
 				ARPlane_tB2F02248AD4019D141553B25C1B9005913E98EF0* L_4;
 				L_4 = Enumerator_get_Current_mB0E34D608F82F52A9D1FB954D259C3B5AE40EEBA_inline((&V_0), Enumerator_get_Current_mB0E34D608F82F52A9D1FB954D259C3B5AE40EEBA_RuntimeMethod_var);
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:514>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:514>
 				NullCheck(L_4);
 				bool L_5;
 				L_5 = Component_TryGetComponent_TisARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3_m7CF8B82289103549CEED7251D5B3BE8D0878753E(L_4, (&V_1), Component_TryGetComponent_TisARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3_m7CF8B82289103549CEED7251D5B3BE8D0878753E_RuntimeMethod_var);
@@ -4610,12 +4708,12 @@ IL_001e_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:516>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:516>
 				List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_6 = __this->___featheredPlaneMeshVisualizerCompanions;
 				ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* L_7 = V_1;
 				NullCheck(L_6);
 				List_1_Add_m0572296BB7CA147FC5AC55DB16EE0E4B62B5E259_inline(L_6, L_7, List_1_Add_m0572296BB7CA147FC5AC55DB16EE0E4B62B5E259_RuntimeMethod_var);
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:517>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:517>
 				ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* L_8 = V_1;
 				DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_9 = __this->___m_DebugPlaneSlider;
 				NullCheck(L_9);
@@ -4627,7 +4725,7 @@ IL_001e_1:
 
 IL_0055_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:512>
 				bool L_11;
 				L_11 = Enumerator_MoveNext_mBEBCACB1FE02CD96775C47002B58503777719BFD((&V_0), Enumerator_MoveNext_mBEBCACB1FE02CD96775C47002B58503777719BFD_RuntimeMethod_var);
 				if (L_11)
@@ -4647,7 +4745,7 @@ IL_0055_1:
 
 IL_006e:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:522>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:522>
 		ReadOnlyList_1_t735C0285ED386FDA71AE395687A37934B79B4D68* L_12;
 		L_12 = ARTrackablesChangedEventArgs_1_get_removed_m9BF99D9C873BF31176456350C76D7CD1DB160F19_inline((&___0_eventArgs), ARTrackablesChangedEventArgs_1_get_removed_m9BF99D9C873BF31176456350C76D7CD1DB160F19_RuntimeMethod_var);
 		NullCheck(L_12);
@@ -4659,7 +4757,7 @@ IL_006e:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
 		ReadOnlyList_1_t735C0285ED386FDA71AE395687A37934B79B4D68* L_14;
 		L_14 = ARTrackablesChangedEventArgs_1_get_removed_m9BF99D9C873BF31176456350C76D7CD1DB160F19_inline((&___0_eventArgs), ARTrackablesChangedEventArgs_1_get_removed_m9BF99D9C873BF31176456350C76D7CD1DB160F19_RuntimeMethod_var);
 		NullCheck(L_14);
@@ -4685,11 +4783,11 @@ FINALLY_00cc:
 
 IL_008c_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
 				KeyValuePair_2_tF4103E1E436E82040535A2C299BE9A183DB1BCA6 L_16;
 				L_16 = Enumerator_get_Current_m65257BBB1921E8492B7AA4E2ACA0AA7D61455DC9_inline((&V_2), Enumerator_get_Current_m65257BBB1921E8492B7AA4E2ACA0AA7D61455DC9_RuntimeMethod_var);
 				V_3 = L_16;
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:526>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:526>
 				ARPlane_tB2F02248AD4019D141553B25C1B9005913E98EF0* L_17;
 				L_17 = KeyValuePair_2_get_Value_m8EE4758FF28E491A8B62E8583FF69767EE64ACE3_inline((&V_3), KeyValuePair_2_get_Value_m8EE4758FF28E491A8B62E8583FF69767EE64ACE3_RuntimeMethod_var);
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -4712,7 +4810,7 @@ IL_008c_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:527>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:527>
 				List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_21 = __this->___featheredPlaneMeshVisualizerCompanions;
 				ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* L_22 = V_4;
 				NullCheck(L_21);
@@ -4722,7 +4820,7 @@ IL_008c_1:
 
 IL_00c1_1:
 			{
-				//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:524>
 				bool L_24;
 				L_24 = Enumerator_MoveNext_m276C7437B6CAC224E26C4053F3D4AB4A387D1CE1((&V_2), Enumerator_MoveNext_m276C7437B6CAC224E26C4053F3D4AB4A387D1CE1_RuntimeMethod_var);
 				if (L_24)
@@ -4742,7 +4840,7 @@ IL_00c1_1:
 
 IL_00da:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:532>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:532>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_25 = __this->___m_PlaneManager;
 		NullCheck(L_25);
 		TrackableCollection_1_t020ABE893108AA7BEFF830BE31295402EFBDDCA7 L_26;
@@ -4760,11 +4858,11 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:534>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:534>
 		List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_30 = __this->___featheredPlaneMeshVisualizerCompanions;
 		NullCheck(L_30);
 		List_1_Clear_m52973C491707C18E4CA955980CAAD5D5DF8F0E1D_inline(L_30, List_1_Clear_m52973C491707C18E4CA955980CAAD5D5DF8F0E1D_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
 		ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* L_31 = __this->___m_PlaneManager;
 		NullCheck(L_31);
 		TrackableCollection_1_t020ABE893108AA7BEFF830BE31295402EFBDDCA7 L_32;
@@ -4778,10 +4876,10 @@ IL_00da:
 
 IL_011e:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
 		ARPlane_tB2F02248AD4019D141553B25C1B9005913E98EF0* L_34;
 		L_34 = Enumerator_get_Current_mA7E36939DA28B409D55BE5435221AAC46E40F14C((&V_6), Enumerator_get_Current_mA7E36939DA28B409D55BE5435221AAC46E40F14C_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:537>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:537>
 		NullCheck(L_34);
 		bool L_35;
 		L_35 = Component_TryGetComponent_TisARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3_m7CF8B82289103549CEED7251D5B3BE8D0878753E(L_34, (&V_7), Component_TryGetComponent_TisARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3_m7CF8B82289103549CEED7251D5B3BE8D0878753E_RuntimeMethod_var);
@@ -4791,12 +4889,12 @@ IL_011e:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:539>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:539>
 		List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_36 = __this->___featheredPlaneMeshVisualizerCompanions;
 		ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* L_37 = V_7;
 		NullCheck(L_36);
 		List_1_Add_m0572296BB7CA147FC5AC55DB16EE0E4B62B5E259_inline(L_36, L_37, List_1_Add_m0572296BB7CA147FC5AC55DB16EE0E4B62B5E259_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:540>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:540>
 		ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* L_38 = V_7;
 		DebugSlider_tA600859221313A94DA826024E574C2E266D20C16* L_39 = __this->___m_DebugPlaneSlider;
 		NullCheck(L_39);
@@ -4808,7 +4906,7 @@ IL_011e:
 
 IL_0157:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:535>
 		bool L_41;
 		L_41 = Enumerator_MoveNext_mF71F7AD2C7C3D2A3DE840026172981A72436CB47((&V_6), Enumerator_MoveNext_mF71F7AD2C7C3D2A3DE840026172981A72436CB47_RuntimeMethod_var);
 		if (L_41)
@@ -4819,11 +4917,11 @@ IL_0157:
 
 IL_0160:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:544>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:544>
 		return;
 	}
 }
-// Method Definition Index: 90506
+// Method Definition Index: 90341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager__ctor_m5C7B95657FD13CB07207F964A1162073B85C091D (ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4838,25 +4936,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARTemplateMenuManager__ctor_m5C7B95657FD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:188>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:188>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_0 = (XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0*)il2cpp_codegen_object_new(XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0_il2cpp_TypeInfo_var);
 		XRInputValueReader_1__ctor_mCCE3009EBDA5485C04EB7D2EDC884E3C4F0F185B(L_0, _stringLiteralCF49A3A156338B04F88DE9CA65E316E5C5A5637B, 2, XRInputValueReader_1__ctor_mCCE3009EBDA5485C04EB7D2EDC884E3C4F0F185B_RuntimeMethod_var);
 		__this->___m_TapStartPositionInput = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_TapStartPositionInput), (void*)L_0);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:201>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:201>
 		XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0* L_1 = (XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0*)il2cpp_codegen_object_new(XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0_il2cpp_TypeInfo_var);
 		XRInputValueReader_1__ctor_mCCE3009EBDA5485C04EB7D2EDC884E3C4F0F185B(L_1, _stringLiteral0BC7C5801980AE591057F623889B06C0D7FD554C, 2, XRInputValueReader_1__ctor_mCCE3009EBDA5485C04EB7D2EDC884E3C4F0F185B_RuntimeMethod_var);
 		__this->___m_DragCurrentPositionInput = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DragCurrentPositionInput), (void*)L_1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:217>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:217>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2;
 		L_2 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___m_ObjectButtonOffset = L_2;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:218>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:218>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
 		L_3 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___m_ObjectMenuOffset = L_3;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:219>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARTemplateMenuManager.cs:219>
 		List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67* L_4 = (List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67*)il2cpp_codegen_object_new(List_1_t9F2DBD63A31B9FDEC3A83CBBFC267B8FC1CE0E67_il2cpp_TypeInfo_var);
 		List_1__ctor_m3100C9BC361715AD4BF658FECEE4BD117A9E0AA4(L_4, List_1__ctor_m3100C9BC361715AD4BF658FECEE4BD117A9E0AA4_RuntimeMethod_var);
 		__this->___featheredPlaneMeshVisualizerCompanions = L_4;
@@ -4907,16 +5005,16 @@ IL2CPP_EXTERN_C void Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3_marshal_com_
 IL2CPP_EXTERN_C void Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3_marshal_com_cleanup(Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 90507
+// Method Definition Index: 90342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40 (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* __this, int32_t ___0_goal, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:29>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:29>
 		int32_t L_0 = ___0_goal;
 		__this->___CurrentGoal = L_0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:30>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:30>
 		__this->___Completed = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:31>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:31>
 		return;
 	}
 }
@@ -4935,131 +5033,131 @@ IL2CPP_EXTERN_C  void Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40_Adjus
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90508
+// Method Definition Index: 90343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* GoalManager_get_stepList_m519A53B0017307213782339F1983F51797D8D59F (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:105>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:105>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_0 = __this->___m_StepList;
 		return L_0;
 	}
 }
-// Method Definition Index: 90509
+// Method Definition Index: 90344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_stepList_mA7BA9F1437D4059F970819F77F49EC81126FCA7A (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:106>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:106>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_0 = ___0_value;
 		__this->___m_StepList = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_StepList), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90510
+// Method Definition Index: 90345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* GoalManager_get_objectSpawner_m38DBF10BED4D8F75DD547AA33FC4916E15ED7C68 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:118>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:118>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = __this->___m_ObjectSpawner;
 		return L_0;
 	}
 }
-// Method Definition Index: 90511
+// Method Definition Index: 90346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_objectSpawner_mA828B192DDB28957B95C83A4712FF7B24CF77481 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:119>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:119>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_0 = ___0_value;
 		__this->___m_ObjectSpawner = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectSpawner), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90512
+// Method Definition Index: 90347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GoalManager_get_greetingPrompt_mCEE3C35517EF677D8727DDF7B78ED4F6BF5B0A69 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:131>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:131>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_GreetingPrompt;
 		return L_0;
 	}
 }
-// Method Definition Index: 90513
+// Method Definition Index: 90348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_greetingPrompt_mF18019D099C5BF22EA958E1300152A0F47476EBA (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:132>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:132>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_GreetingPrompt = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_GreetingPrompt), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90514
+// Method Definition Index: 90349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GoalManager_get_optionsButton_m2867313D38BF94BF1DAFA63717DBF56F13FBF7F0 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:144>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:144>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_OptionsButton;
 		return L_0;
 	}
 }
-// Method Definition Index: 90515
+// Method Definition Index: 90350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_optionsButton_m3BA54FCE185B66E74731B662D9208435854AA25A (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:145>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:145>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_OptionsButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OptionsButton), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90516
+// Method Definition Index: 90351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GoalManager_get_createButton_mB9B4174CA701A4025B388B0EA6B77E3ED5875AA8 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:157>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:157>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_CreateButton;
 		return L_0;
 	}
 }
-// Method Definition Index: 90517
+// Method Definition Index: 90352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_createButton_m3E4EB608956F965A96F4B88B0071B06F6889F74E (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:158>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:158>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_CreateButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CreateButton), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90518
+// Method Definition Index: 90353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* GoalManager_get_menuManager_m58A9307D3C960A1798397179A1015230FD5C4BCE (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:170>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:170>
 		ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* L_0 = __this->___m_MenuManager;
 		return L_0;
 	}
 }
-// Method Definition Index: 90519
+// Method Definition Index: 90354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_set_menuManager_m85EDAD9F968BAB1C0DFCA35E301EF53C9B086550 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:171>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:171>
 		ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* L_0 = ___0_value;
 		__this->___m_MenuManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MenuManager), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90520
+// Method Definition Index: 90355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_Update_m3D6264D20693C60407FD2075F42A750322861F5A (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:185>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:185>
 		Pointer_t800EF2832B62E889AC9C182E3B18098AF220E32A* L_0;
 		L_0 = Pointer_get_current_m207443803344C305DEAAEBA56C445980D6C22CB3_inline(NULL);
 		if (!L_0)
@@ -5115,7 +5213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_Update_m3D6264D20693C60407FD
 
 IL_004a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:187>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:187>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_11 = __this->___m_CurrentCoroutine;
 		if (!L_11)
 		{
@@ -5123,24 +5221,24 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:189>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:189>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_12 = __this->___m_CurrentCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_12, NULL);
 	}
 
 IL_005e:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:191>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:191>
 		GoalManager_CompleteGoal_mC6CB714629BF5607FC0AB6DA08BD05E8DE6E2ED0(__this, NULL);
 	}
 
 IL_0064:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:193>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:193>
 		return;
 	}
 }
-// Method Definition Index: 90521
+// Method Definition Index: 90356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_CompleteGoal_mC6CB714629BF5607FC0AB6DA08BD05E8DE6E2ED0 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5154,7 +5252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_CompleteGoal_mC6CB714629BF56
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:197>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:197>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_0 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_1 = L_0->___CurrentGoal;
 		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
@@ -5163,7 +5261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_CompleteGoal_mC6CB714629BF56
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:198>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:198>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_2 = __this->___m_ObjectSpawner;
 		Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C* L_3 = (Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C*)il2cpp_codegen_object_new(Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C_il2cpp_TypeInfo_var);
 		Action_1__ctor_m3FA37AFA5AAB09F49F9C00A7D5B2A5F3D83CBB01(L_3, __this, (intptr_t)((void*)GoalManager_OnObjectSpawned_mD94584027BB62B5AF166EB87C98142E3279A76B3_RuntimeMethod_var), NULL);
@@ -5173,13 +5271,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_CompleteGoal_mC6CB714629BF56
 
 IL_0025:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:200>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:200>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_4 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		L_4->___Completed = (bool)1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:201>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:201>
 		int32_t L_5 = __this->___m_CurrentGoalIndex;
 		__this->___m_CurrentGoalIndex = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:202>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:202>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_6 = __this->___m_OnboardingGoals;
 		NullCheck(L_6);
 		int32_t L_7;
@@ -5190,13 +5288,13 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:204>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:204>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_8 = __this->___m_OnboardingGoals;
 		NullCheck(L_8);
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_9;
 		L_9 = Queue_1_Dequeue_m58A5067B261D533708910905BB3FC77173816768(L_8, Queue_1_Dequeue_m58A5067B261D533708910905BB3FC77173816768_RuntimeMethod_var);
 		__this->___m_CurrentGoal = L_9;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:205>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:205>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_10 = __this->___m_StepList;
 		int32_t L_11 = __this->___m_CurrentGoalIndex;
 		NullCheck(L_10);
@@ -5206,7 +5304,7 @@ IL_0025:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = L_12->___stepObject;
 		NullCheck(L_13);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:206>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:206>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_14 = __this->___m_StepList;
 		int32_t L_15 = __this->___m_CurrentGoalIndex;
 		NullCheck(L_14);
@@ -5221,7 +5319,7 @@ IL_0025:
 
 IL_009a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:210>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:210>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_18 = __this->___m_StepList;
 		int32_t L_19 = __this->___m_CurrentGoalIndex;
 		NullCheck(L_18);
@@ -5231,21 +5329,21 @@ IL_009a:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = L_20->___stepObject;
 		NullCheck(L_21);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_21, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:211>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:211>
 		__this->___m_AllGoalsFinished = (bool)1;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:212>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:212>
 		return;
 	}
 
 IL_00c0:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:215>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:215>
 		GoalManager_PreprocessGoal_m1265FBF7842F8507D92A7E4F41429611EF0D2A75(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:216>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:216>
 		return;
 	}
 }
-// Method Definition Index: 90522
+// Method Definition Index: 90357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_PreprocessGoal_m1265FBF7842F8507D92A7E4F41429611EF0D2A75 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5256,7 +5354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_PreprocessGoal_m1265FBF7842F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:220>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:220>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_0 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_1 = L_0->___CurrentGoal;
 		if ((!(((uint32_t)L_1) == ((uint32_t)1))))
@@ -5265,7 +5363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_PreprocessGoal_m1265FBF7842F
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:222>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:222>
 		RuntimeObject* L_2;
 		L_2 = GoalManager_WaitUntilNextCard_m53093558A106CFFFA24C572E961CE8294F55F5D4(__this, (5.0f), NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
@@ -5277,7 +5375,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_PreprocessGoal_m1265FBF7842F
 
 IL_0026:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:224>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:224>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_4 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_5 = L_4->___CurrentGoal;
 		if ((!(((uint32_t)L_5) == ((uint32_t)3))))
@@ -5286,7 +5384,7 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:226>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:226>
 		RuntimeObject* L_6;
 		L_6 = GoalManager_WaitUntilNextCard_m53093558A106CFFFA24C572E961CE8294F55F5D4(__this, (6.0f), NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
@@ -5298,7 +5396,7 @@ IL_0026:
 
 IL_004c:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:228>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:228>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_8 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_9 = L_8->___CurrentGoal;
 		if ((!(((uint32_t)L_9) == ((uint32_t)4))))
@@ -5307,7 +5405,7 @@ IL_004c:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:230>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:230>
 		RuntimeObject* L_10;
 		L_10 = GoalManager_WaitUntilNextCard_m53093558A106CFFFA24C572E961CE8294F55F5D4(__this, (8.0f), NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_11;
@@ -5319,7 +5417,7 @@ IL_004c:
 
 IL_0072:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:232>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:232>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_12 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_13 = L_12->___CurrentGoal;
 		if ((!(((uint32_t)L_13) == ((uint32_t)2))))
@@ -5328,9 +5426,9 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:234>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:234>
 		__this->___m_SurfacesTapped = 0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:235>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:235>
 		ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* L_14 = __this->___m_ObjectSpawner;
 		Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C* L_15 = (Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C*)il2cpp_codegen_object_new(Action_1_tFF0F3D982F6CEB68CBA322555CBBEE6AE1D2519C_il2cpp_TypeInfo_var);
 		Action_1__ctor_m3FA37AFA5AAB09F49F9C00A7D5B2A5F3D83CBB01(L_15, __this, (intptr_t)((void*)GoalManager_OnObjectSpawned_mD94584027BB62B5AF166EB87C98142E3279A76B3_RuntimeMethod_var), NULL);
@@ -5340,11 +5438,11 @@ IL_0072:
 
 IL_009e:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:237>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:237>
 		return;
 	}
 }
-// Method Definition Index: 90523
+// Method Definition Index: 90358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GoalManager_WaitUntilNextCard_m53093558A106CFFFA24C572E961CE8294F55F5D4 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, float ___0_seconds, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5367,24 +5465,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GoalManager_WaitUntilNextCard_
 		return L_2;
 	}
 }
-// Method Definition Index: 90524
+// Method Definition Index: 90359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_ForceCompleteGoal_m4F43478737C057684BBF1CCF978299B0F38F89F3 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:261>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:261>
 		GoalManager_CompleteGoal_mC6CB714629BF5607FC0AB6DA08BD05E8DE6E2ED0(__this, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:262>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:262>
 		return;
 	}
 }
-// Method Definition Index: 90525
+// Method Definition Index: 90360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_OnObjectSpawned_mD94584027BB62B5AF166EB87C98142E3279A76B3 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_spawnedObject, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:266>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:266>
 		int32_t L_0 = __this->___m_SurfacesTapped;
 		__this->___m_SurfacesTapped = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:267>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:267>
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3* L_1 = (Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3*)(&__this->___m_CurrentGoal);
 		int32_t L_2 = L_1->___CurrentGoal;
 		if ((!(((uint32_t)L_2) == ((uint32_t)2))))
@@ -5400,17 +5498,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_OnObjectSpawned_mD94584027BB
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:269>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:269>
 		GoalManager_CompleteGoal_mC6CB714629BF5607FC0AB6DA08BD05E8DE6E2ED0(__this, NULL);
 	}
 
 IL_002b:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:271>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:271>
 		return;
 	}
 }
-// Method Definition Index: 90526
+// Method Definition Index: 90361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_StartCoaching_m7A3A4F7B49850DAEAE0E27991ADFE35E6029F9FB (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5439,7 +5537,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_StartCoaching_m7A3A4F7B49850
 	int32_t V_6 = 0;
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:278>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:278>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_0 = __this->___m_OnboardingGoals;
 		if (!L_0)
 		{
@@ -5447,7 +5545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_StartCoaching_m7A3A4F7B49850
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:280>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:280>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_1 = __this->___m_OnboardingGoals;
 		NullCheck(L_1);
 		Queue_1_Clear_m1177D59BBD477C4015B272C1E3DD772053E14217(L_1, Queue_1_Clear_m1177D59BBD477C4015B272C1E3DD772053E14217_RuntimeMethod_var);
@@ -5455,12 +5553,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager_StartCoaching_m7A3A4F7B49850
 
 IL_0013:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:283>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:283>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_2 = (Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1*)il2cpp_codegen_object_new(Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1_il2cpp_TypeInfo_var);
 		Queue_1__ctor_m8244F25246970E6C4496CB7FC78FF1C5A9D41CD8(L_2, Queue_1__ctor_m8244F25246970E6C4496CB7FC78FF1C5A9D41CD8_RuntimeMethod_var);
 		__this->___m_OnboardingGoals = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnboardingGoals), (void*)L_2);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:285>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:285>
 		bool L_3 = __this->___m_AllGoalsFinished;
 		if (L_3)
 		{
@@ -5468,9 +5566,9 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:287>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:287>
 		Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40((&V_5), 1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:288>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:288>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_4 = __this->___m_OnboardingGoals;
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_5 = V_5;
 		NullCheck(L_4);
@@ -5479,7 +5577,7 @@ IL_0013:
 
 IL_003b:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:291>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:291>
 		bool L_6 = __this->___m_AllGoalsFinished;
 		if (L_6)
 		{
@@ -5499,62 +5597,62 @@ IL_0046:
 IL_0047:
 	{
 		V_0 = G_B7_0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:293>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:293>
 		Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40((&V_1), 2, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:294>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:294>
 		Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40((&V_2), 3, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:295>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:295>
 		Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40((&V_3), 4, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:296>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:296>
 		Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40((&V_4), 3, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:298>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:298>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_7 = __this->___m_OnboardingGoals;
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_8 = V_1;
 		NullCheck(L_7);
 		Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0(L_7, L_8, Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:299>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:299>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_9 = __this->___m_OnboardingGoals;
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_10 = V_2;
 		NullCheck(L_9);
 		Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0(L_9, L_10, Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:300>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:300>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_11 = __this->___m_OnboardingGoals;
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_12 = V_3;
 		NullCheck(L_11);
 		Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0(L_11, L_12, Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:301>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:301>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_13 = __this->___m_OnboardingGoals;
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_14 = V_4;
 		NullCheck(L_13);
 		Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0(L_13, L_14, Queue_1_Enqueue_m9A1558C56E46C828AF711FF676E9B4645DC778E0_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:303>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:303>
 		Queue_1_t4CB169A5A5D8DE4BD05528201661B605B2153FD1* L_15 = __this->___m_OnboardingGoals;
 		NullCheck(L_15);
 		Goal_tA07CAE5E13E53F9356FD032516AB76F0E8B73DB3 L_16;
 		L_16 = Queue_1_Dequeue_m58A5067B261D533708910905BB3FC77173816768(L_15, Queue_1_Dequeue_m58A5067B261D533708910905BB3FC77173816768_RuntimeMethod_var);
 		__this->___m_CurrentGoal = L_16;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:304>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:304>
 		__this->___m_AllGoalsFinished = (bool)0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:305>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:305>
 		int32_t L_17 = V_0;
 		__this->___m_CurrentGoalIndex = L_17;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:307>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:307>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___m_GreetingPrompt;
 		NullCheck(L_18);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_18, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:308>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:308>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___m_OptionsButton;
 		NullCheck(L_19);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_19, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:309>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:309>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = __this->___m_CreateButton;
 		NullCheck(L_20);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_20, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:310>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:310>
 		ARTemplateMenuManager_tB4B42EBED6FAD71CA4799DBB7B7EB42E5BF2A95C* L_21 = __this->___m_MenuManager;
 		NullCheck(L_21);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_21, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
 		int32_t L_22 = V_0;
 		V_6 = L_22;
 		goto IL_0130;
@@ -5562,7 +5660,7 @@ IL_0047:
 
 IL_00ed:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:314>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:314>
 		int32_t L_23 = V_6;
 		int32_t L_24 = V_0;
 		if ((!(((uint32_t)L_23) == ((uint32_t)L_24))))
@@ -5571,7 +5669,7 @@ IL_00ed:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:316>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:316>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_25 = __this->___m_StepList;
 		int32_t L_26 = V_6;
 		NullCheck(L_25);
@@ -5581,14 +5679,14 @@ IL_00ed:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = L_27->___stepObject;
 		NullCheck(L_28);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_28, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:317>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:317>
 		GoalManager_PreprocessGoal_m1265FBF7842F8507D92A7E4F41429611EF0D2A75(__this, NULL);
 		goto IL_012a;
 	}
 
 IL_0112:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:321>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:321>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_29 = __this->___m_StepList;
 		int32_t L_30 = V_6;
 		NullCheck(L_29);
@@ -5602,14 +5700,14 @@ IL_0112:
 
 IL_012a:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
 		int32_t L_33 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_33, 1));
 	}
 
 IL_0130:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:312>
 		int32_t L_34 = V_6;
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_35 = __this->___m_StepList;
 		NullCheck(L_35);
@@ -5621,11 +5719,11 @@ IL_0130:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:325>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:325>
 		return;
 	}
 }
-// Method Definition Index: 90527
+// Method Definition Index: 90362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager__ctor_mEB2A7B5C036D366783C5E2A86BFD3FBF0FFBF549 (GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5636,7 +5734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager__ctor_mEB2A7B5C036D366783C5E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:98>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:98>
 		List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1* L_0 = (List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1*)il2cpp_codegen_object_new(List_1_t2C3F4AE9E5A255A5D7A8958EFBA84B860BAC15E1_il2cpp_TypeInfo_var);
 		List_1__ctor_m029B6DAB4E2E350E9379B6FE2DB309EF178358CB(L_0, List_1__ctor_m029B6DAB4E2E350E9379B6FE2DB309EF178358CB_RuntimeMethod_var);
 		__this->___m_StepList = L_0;
@@ -5661,7 +5759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoalManager__ctor_mEB2A7B5C036D366783C5E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90528
+// Method Definition Index: 90363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Step__ctor_m2D1B8F532014406F10F55FB3532DEC81CF87E9DF (Step_tA0A8644902DF5D68143E26B3985CF990628ACC27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5677,7 +5775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Step__ctor_m2D1B8F532014406F10F55FB3532D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90529
+// Method Definition Index: 90364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitUntilNextCardU3Ed__36__ctor_m627E8D1F72B42CA051C208738E8FA0DB0D45F381 (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5687,14 +5785,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitUntilNextCardU3Ed__36__ctor_m627E
 		return;
 	}
 }
-// Method Definition Index: 90530
+// Method Definition Index: 90365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitUntilNextCardU3Ed__36_System_IDisposable_Dispose_mCAFFC0FEFAC8FA58A20A5B288BAAEB9FF9B2C890 (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 90531
+// Method Definition Index: 90366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitUntilNextCardU3Ed__36_MoveNext_mABE95FF2334C1607DCD0F8EB0A9A77018A46B53A (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5730,7 +5828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitUntilNextCardU3Ed__36_MoveNext_mA
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:247>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:247>
 		float L_4 = __this->___seconds;
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_5 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_5, L_4, NULL);
@@ -5743,7 +5841,7 @@ IL_0017:
 IL_0038:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:249>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:249>
 		Pointer_t800EF2832B62E889AC9C182E3B18098AF220E32A* L_6;
 		L_6 = Pointer_get_current_m207443803344C305DEAAEBA56C445980D6C22CB3_inline(NULL);
 		NullCheck(L_6);
@@ -5758,12 +5856,12 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:251>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:251>
 		GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* L_9 = V_1;
 		NullCheck(L_9);
 		L_9->___m_CurrentCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_9->___m_CurrentCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:252>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:252>
 		GoalManager_tC47AB5CB7FAE2370F36BD3B7A63168A9B9C449AC* L_10 = V_1;
 		NullCheck(L_10);
 		GoalManager_CompleteGoal_mC6CB714629BF5607FC0AB6DA08BD05E8DE6E2ED0(L_10, NULL);
@@ -5771,11 +5869,11 @@ IL_0038:
 
 IL_005d:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:254>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/GoalManager.cs:254>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 90532
+// Method Definition Index: 90367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5FCEEE9A8231F83F1EC75CF9C626815CEBA1E751 (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5783,7 +5881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitUntilNextCardU3Ed__36_S
 		return L_0;
 	}
 }
-// Method Definition Index: 90533
+// Method Definition Index: 90368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m1B7293799D7B9FEEFD4125924CA90DDA0488B21C (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5792,7 +5890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitUntilNextCardU3Ed__36_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m1B7293799D7B9FEEFD4125924CA90DDA0488B21C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 90534
+// Method Definition Index: 90369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_m32915AC988ADACC69CBD8486A12AF1B0F2CBAC4B (U3CWaitUntilNextCardU3Ed__36_t4E7331640F3B0F7B883B39944621CBE09CD9040B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5808,31 +5906,540 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitUntilNextCardU3Ed__36_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90535
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* CarouselObj_get_FurniturePic_m1AC640997075ACD8D3974543631578BC83C3E25C (CarouselObj_t4AD14C15B7EBDC1D2B975EC00D94406E5BC6778F* __this, const RuntimeMethod* method) 
+// Method Definition Index: 90370
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_Start_m313AF893A56549C1D0CBD8000BB4DC1B55A063AC (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/CarouselObj.cs:6>
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___U3CFurniturePicU3Ek__BackingField;
-		return L_0;
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC0A19AE92FE495996EAEA2F2A069076E9D3CC713);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDBE3DC737BEB686130E852055CFC2983B739DB63);
+		s_Il2CppMethodInitialized = true;
 	}
-}
-// Method Definition Index: 90536
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselObj_set_FurniturePic_mFE605AB63DE88B9C2FE0F5BD7DD34FEB7F1E17C9 (CarouselObj_t4AD14C15B7EBDC1D2B975EC00D94406E5BC6778F* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_value, const RuntimeMethod* method) 
-{
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/CarouselObj.cs:6>
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = ___0_value;
-		__this->___U3CFurniturePicU3Ek__BackingField = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CFurniturePicU3Ek__BackingField), (void*)L_0);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:33>
+		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_0 = __this->___scrollRect;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_1)
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_2 = __this->___content;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_3)
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___indicatorPrefab;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_5)
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___indicatorContainer;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_7;
+		L_7 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_7)
+		{
+			goto IL_0043;
+		}
+	}
+
+IL_0038:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:35>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralC0A19AE92FE495996EAEA2F2A069076E9D3CC713, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:36>
+		return;
+	}
+
+IL_0043:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:40>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = __this->___content;
+		NullCheck(L_8);
+		int32_t L_9;
+		L_9 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_8, NULL);
+		__this->___pageCount = L_9;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:41>
+		int32_t L_10 = __this->___pageCount;
+		if (L_10)
+		{
+			goto IL_0067;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:43>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralDBE3DC737BEB686130E852055CFC2983B739DB63, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:44>
+		return;
+	}
+
+IL_0067:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:49>
+		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_11 = __this->___scrollRect;
+		NullCheck(L_11);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12;
+		L_12 = ScrollRect_get_viewport_m85092216DD476F77E78F5CE50F9C4E70063ECCF9_inline(L_11, NULL);
+		NullCheck(L_12);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_13;
+		L_13 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_12, NULL);
+		V_0 = L_13;
+		float L_14;
+		L_14 = Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline((&V_0), NULL);
+		__this->___pageWidth = L_14;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:52>
+		CarouselManager_SetupIndicators_m2C879D35D3925E44A126757B8D73EAB683CD6DBA(__this, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:55>
+		__this->___currentPageIndex = 0;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:56>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_15 = __this->___content;
+		NullCheck(L_15);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_16;
+		L_16 = RectTransform_get_anchoredPosition_m38F25A4253B0905BB058BE73DBF43C7172CE0680(L_15, NULL);
+		float L_17 = L_16.___x;
+		__this->___targetXPosition = L_17;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:57>
+		CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335(__this, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:58>
 		return;
 	}
 }
-// Method Definition Index: 90537
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselObj__ctor_m29A372F4DA432128B99304EDB0F2F1BFFF7D12F9 (CarouselObj_t4AD14C15B7EBDC1D2B975EC00D94406E5BC6778F* __this, const RuntimeMethod* method) 
+// Method Definition Index: 90371
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_Update_m1A0BCF947CD571E0B85FEDC46DE6C57AEA1E5093 (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:63>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___content;
+		NullCheck(L_0);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = RectTransform_get_anchoredPosition_m38F25A4253B0905BB058BE73DBF43C7172CE0680(L_0, NULL);
+		V_0 = L_1;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:64>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = V_0;
+		float L_3 = L_2.___x;
+		float L_4 = __this->___targetXPosition;
+		float L_5;
+		L_5 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		float L_6 = __this->___scrollSpeed;
+		float L_7;
+		L_7 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_3, L_4, ((float)il2cpp_codegen_multiply(L_5, L_6)), NULL);
+		(&V_0)->___x = L_7;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:65>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = __this->___content;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_0;
+		NullCheck(L_8);
+		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_8, L_9, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:68>
+		CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335(__this, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:69>
+		return;
+	}
+}
+// Method Definition Index: 90372
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_SetupIndicators_m2C879D35D3925E44A126757B8D73EAB683CD6DBA (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	RuntimeObject* V_1 = NULL;
+	int32_t V_2 = 0;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_3 = NULL;
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:77>
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___indicators;
+		NullCheck(L_0);
+		List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline(L_0, List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:78>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___indicatorContainer;
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = Transform_GetEnumerator_mA7E1C882ACA0C33E284711CD09971DEA3FFEF404(L_1, NULL);
+		V_0 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0038:
+			{
+				{
+					RuntimeObject* L_3 = V_0;
+					V_1 = ((RuntimeObject*)IsInst((RuntimeObject*)L_3, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var));
+					RuntimeObject* L_4 = V_1;
+					if (!L_4)
+					{
+						goto IL_0048;
+					}
+				}
+				{
+					RuntimeObject* L_5 = V_1;
+					NullCheck(L_5);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+				}
+
+IL_0048:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			{
+				goto IL_002e_1;
+			}
+
+IL_0019_1:
+			{
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:78>
+				RuntimeObject* L_6 = V_0;
+				NullCheck(L_6);
+				RuntimeObject* L_7;
+				L_7 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_6);
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:80>
+				NullCheck(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_7, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)));
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
+				L_8 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_7, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)), NULL);
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_8, NULL);
+			}
+
+IL_002e_1:
+			{
+				//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:78>
+				RuntimeObject* L_9 = V_0;
+				NullCheck(L_9);
+				bool L_10;
+				L_10 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_9);
+				if (L_10)
+				{
+					goto IL_0019_1;
+				}
+			}
+			{
+				goto IL_0049;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0049:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:84>
+		V_2 = 0;
+		goto IL_006f;
+	}
+
+IL_004d:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:86>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___indicatorPrefab;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = __this->___indicatorContainer;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
+		L_13 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_11, L_12, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
+		V_3 = L_13;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:87>
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_14 = __this->___indicators;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_3;
+		NullCheck(L_14);
+		List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline(L_14, L_15, List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:84>
+		int32_t L_16 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_16, 1));
+	}
+
+IL_006f:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:84>
+		int32_t L_17 = V_2;
+		int32_t L_18 = __this->___pageCount;
+		if ((((int32_t)L_17) < ((int32_t)L_18)))
+		{
+			goto IL_004d;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:89>
+		return;
+	}
+}
+// Method Definition Index: 90373
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335 (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral32189949CB1CA4A6EBB1A643EBE2DB69713D5407);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA87494629332443BCB190D1BE4733B86174C509D);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_2 = NULL;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_3 = NULL;
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:98>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___content;
+		NullCheck(L_0);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = RectTransform_get_anchoredPosition_m38F25A4253B0905BB058BE73DBF43C7172CE0680(L_0, NULL);
+		float L_2 = L_1.___x;
+		float L_3;
+		L_3 = fabsf(L_2);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:101>
+		float L_4 = __this->___pageWidth;
+		int32_t L_5;
+		L_5 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)(L_3/L_4)), NULL);
+		V_0 = L_5;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:104>
+		int32_t L_6 = V_0;
+		int32_t L_7 = __this->___pageCount;
+		int32_t L_8;
+		L_8 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_6, 0, ((int32_t)il2cpp_codegen_subtract(L_7, 1)), NULL);
+		__this->___currentPageIndex = L_8;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:107>
+		V_1 = 0;
+		goto IL_00c7;
+	}
+
+IL_003e:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:110>
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_9 = __this->___indicators;
+		int32_t L_10 = V_1;
+		NullCheck(L_9);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11;
+		L_11 = List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979(L_9, L_10, List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var);
+		NullCheck(L_11);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
+		L_12 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_11, NULL);
+		NullCheck(L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932(L_12, _stringLiteralA87494629332443BCB190D1BE4733B86174C509D, NULL);
+		V_2 = L_13;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:111>
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_14 = __this->___indicators;
+		int32_t L_15 = V_1;
+		NullCheck(L_14);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16;
+		L_16 = List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979(L_14, L_15, List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var);
+		NullCheck(L_16);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_16, NULL);
+		NullCheck(L_17);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
+		L_18 = Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932(L_17, _stringLiteral32189949CB1CA4A6EBB1A643EBE2DB69713D5407, NULL);
+		V_3 = L_18;
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:113>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_20;
+		L_20 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_20)
+		{
+			goto IL_00c3;
+		}
+	}
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21 = V_3;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_22)
+		{
+			goto IL_00c3;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:115>
+		int32_t L_23 = V_1;
+		int32_t L_24 = __this->___currentPageIndex;
+		if ((!(((uint32_t)L_23) == ((uint32_t)L_24))))
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:118>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = V_2;
+		NullCheck(L_25);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26;
+		L_26 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_25, NULL);
+		NullCheck(L_26);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_26, (bool)1, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:119>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27 = V_3;
+		NullCheck(L_27);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
+		L_28 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_27, NULL);
+		NullCheck(L_28);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_28, (bool)0, NULL);
+		goto IL_00c3;
+	}
+
+IL_00ab:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:124>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29 = V_2;
+		NullCheck(L_29);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
+		L_30 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_29, NULL);
+		NullCheck(L_30);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_30, (bool)0, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:125>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31 = V_3;
+		NullCheck(L_31);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
+		L_32 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_31, NULL);
+		NullCheck(L_32);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_32, (bool)1, NULL);
+	}
+
+IL_00c3:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:107>
+		int32_t L_33 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_33, 1));
+	}
+
+IL_00c7:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:107>
+		int32_t L_34 = V_1;
+		int32_t L_35 = __this->___pageCount;
+		if ((((int32_t)L_34) < ((int32_t)L_35)))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:129>
+		return;
+	}
+}
+// Method Definition Index: 90374
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_NextPage_mCF75C832047CAE952F7C87C405EE6CC7F5E3E821 (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
 {
 	{
-		ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF(__this, NULL);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:138>
+		int32_t L_0 = __this->___currentPageIndex;
+		int32_t L_1 = __this->___pageCount;
+		if ((((int32_t)L_0) >= ((int32_t)((int32_t)il2cpp_codegen_subtract(L_1, 1)))))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:140>
+		int32_t L_2 = __this->___currentPageIndex;
+		__this->___currentPageIndex = ((int32_t)il2cpp_codegen_add(L_2, 1));
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:141>
+		int32_t L_3 = __this->___currentPageIndex;
+		CarouselManager_SetTargetPosition_m55B4255BB45F6C74C5BB10C25F8925AAB3B6F33A(__this, L_3, NULL);
+	}
+
+IL_002a:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:143>
+		return;
+	}
+}
+// Method Definition Index: 90375
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_PreviousPage_mF58D438D78BE9E7867B85F1BA15ADEAA90471A9E (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:150>
+		int32_t L_0 = __this->___currentPageIndex;
+		if ((((int32_t)L_0) <= ((int32_t)0)))
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:152>
+		int32_t L_1 = __this->___currentPageIndex;
+		__this->___currentPageIndex = ((int32_t)il2cpp_codegen_subtract(L_1, 1));
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:153>
+		int32_t L_2 = __this->___currentPageIndex;
+		CarouselManager_SetTargetPosition_m55B4255BB45F6C74C5BB10C25F8925AAB3B6F33A(__this, L_2, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:155>
+		return;
+	}
+}
+// Method Definition Index: 90376
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager_SetTargetPosition_m55B4255BB45F6C74C5BB10C25F8925AAB3B6F33A (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, int32_t ___0_pageIndex, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:164>
+		float L_0 = __this->___pageWidth;
+		int32_t L_1 = ___0_pageIndex;
+		__this->___targetXPosition = ((float)il2cpp_codegen_multiply(((-L_0)), ((float)L_1)));
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:165>
+		return;
+	}
+}
+// Method Definition Index: 90377
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselManager__ctor_m4D3F2C90942FF4DD05EF13277E9E9A7DCB089097 (CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:22>
+		__this->___scrollSpeed = (10.0f);
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/CarouselScript.cs:24>
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
+		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_0, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
+		__this->___indicators = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___indicators), (void*)L_0);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
@@ -5844,23 +6451,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarouselObj__ctor_m29A372F4DA432128B9930
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90538
+// Method Definition Index: 90378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreviewScript_Start_m774C339101CE5C8751903D89F2A28E1D473B7E7D (PreviewScript_t04A74CB56C71758DF694DFC69108E1CF7FAFB48E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/PreviewScript.cs:9>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/PreviewScript.cs:9>
 		return;
 	}
 }
-// Method Definition Index: 90539
+// Method Definition Index: 90379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreviewScript_Update_m433C23C56FFDEB94220BA8CFEE3407BEC313CB5F (PreviewScript_t04A74CB56C71758DF694DFC69108E1CF7FAFB48E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/PreviewScript.cs:15>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/PreviewScript.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 90540
+// Method Definition Index: 90380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreviewScript__ctor_m5E887854843886E4078B19350C359BFF3ABBF376 (PreviewScript_t04A74CB56C71758DF694DFC69108E1CF7FAFB48E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5876,28 +6483,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreviewScript__ctor_m5E887854843886E4078
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90541
+// Method Definition Index: 90381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs_Start_m63638A32EB2ABC3FE30A89530CF4F15780EF33C5 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:14>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:14>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___Orange;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:15>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:15>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___Main;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:17>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:17>
 		RuntimeObject* L_2;
 		L_2 = SceneFuncs_Loading_m39E48A0F29404D7FCDB33A0C70763C3AADD73B41(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
 		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:18>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 90542
+// Method Definition Index: 90382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_Loading_m39E48A0F29404D7FCDB33A0C70763C3AADD73B41 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5916,7 +6523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_Loading_m39E48A0F29
 		return L_1;
 	}
 }
-// Method Definition Index: 90543
+// Method Definition Index: 90383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs_arMode_m25F79367C1ED86E0AACCBEE23985C9B244689FA4 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5926,14 +6533,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs_arMode_m25F79367C1ED86E0AACCB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:30>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:30>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:31>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 90544
+// Method Definition Index: 90384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_FadeOut_m78BE1B6BAE61FAE072223FE3A38B0FDE9CB3D295 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5952,15 +6559,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SceneFuncs_FadeOut_m78BE1B6BAE
 		return L_1;
 	}
 }
-// Method Definition Index: 90545
+// Method Definition Index: 90385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs_Update_m5C02DA05D2F7D64B2012C2611B250C1D26FA20F2 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:57>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 90546
+// Method Definition Index: 90386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs__ctor_m46CD2A906D3D2911525AB9D768978E3DF7909E49 (SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5976,7 +6583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneFuncs__ctor_m46CD2A906D3D2911525AB9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90547
+// Method Definition Index: 90387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7__ctor_m9869DE439BC8D5CD343B5777E5F04AC4C60E6144 (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5986,14 +6593,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7__ctor_m9869DE439BC8D5C
 		return;
 	}
 }
-// Method Definition Index: 90548
+// Method Definition Index: 90388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7_System_IDisposable_Dispose_mC36ACFA1FEC24ECE7A627C6A5D298FEDF8A21213 (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 90549
+// Method Definition Index: 90389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutU3Ed__7_MoveNext_mE273536CB28D296BC44650FF4A6AEE0491E81F90 (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6030,9 +6637,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutU3Ed__7_MoveNext_mE273536CB28D
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:36>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:36>
 		__this->___U3CelapsedU3E5__2 = (0.0f);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:37>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:37>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_4 = V_1;
 		NullCheck(L_4);
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_5 = L_4->___Fade;
@@ -6040,23 +6647,23 @@ IL_001a:
 		float L_6;
 		L_6 = CanvasGroup_get_alpha_mBFEA193D2886B27CC53B31F90F7A1659B67ED6DF(L_5, NULL);
 		__this->___U3CstartAlphaU3E5__3 = L_6;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:38>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:38>
 		__this->___U3CfadeDurationU3E5__4 = (1.0f);
 		goto IL_00d6;
 	}
 
 IL_004d:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:42>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:42>
 		float L_7 = __this->___U3CelapsedU3E5__2;
 		float L_8;
 		L_8 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__2 = ((float)il2cpp_codegen_add(L_7, L_8));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:43>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:43>
 		float L_9 = __this->___U3CelapsedU3E5__2;
 		float L_10 = __this->___U3CfadeDurationU3E5__4;
 		V_2 = ((float)(L_9/L_10));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:44>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:44>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_11 = V_1;
 		NullCheck(L_11);
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_12 = L_11->___Fade;
@@ -6066,7 +6673,7 @@ IL_004d:
 		L_15 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_13, (0.0f), L_14, NULL);
 		NullCheck(L_12);
 		CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F(L_12, L_15, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:45>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:45>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_16 = V_1;
 		NullCheck(L_16);
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_17 = L_16->___Logo;
@@ -6075,7 +6682,7 @@ IL_004d:
 		L_19 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline((1.0f), (0.0f), ((float)il2cpp_codegen_multiply(L_18, (20.0f))), NULL);
 		NullCheck(L_17);
 		CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F(L_17, L_19, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:46>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:46>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_20 = V_1;
 		NullCheck(L_20);
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_21 = L_20->___Fade;
@@ -6086,7 +6693,7 @@ IL_004d:
 		RuntimeObject* L_24 = Box(il2cpp_defaults.single_class, &L_23);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_24, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:47>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:47>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -6100,7 +6707,7 @@ IL_00cf:
 
 IL_00d6:
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:40>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:40>
 		float L_25 = __this->___U3CelapsedU3E5__2;
 		float L_26 = __this->___U3CfadeDurationU3E5__4;
 		if ((((float)L_25) < ((float)L_26)))
@@ -6109,17 +6716,17 @@ IL_00d6:
 		}
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:50>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:50>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_27 = V_1;
 		NullCheck(L_27);
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_28 = L_27->___Fade;
 		NullCheck(L_28);
 		CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F(L_28, (0.0f), NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:51>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:51>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 90550
+// Method Definition Index: 90390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA615C05B61F56F765CC15167599C605FDF44B36E (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6127,7 +6734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__7_System_Colle
 		return L_0;
 	}
 }
-// Method Definition Index: 90551
+// Method Definition Index: 90391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7_System_Collections_IEnumerator_Reset_m0CCEE63A46C0C55A48F5EAFFEE94535B24E596E6 (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6136,7 +6743,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__7_System_Collections_IEn
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeOutU3Ed__7_System_Collections_IEnumerator_Reset_m0CCEE63A46C0C55A48F5EAFFEE94535B24E596E6_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 90552
+// Method Definition Index: 90392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__7_System_Collections_IEnumerator_get_Current_m45ED6D6E8AD5C4D0B9B9B2720D150EEBE12085CB (U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6152,7 +6759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__7_System_Colle
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90553
+// Method Definition Index: 90393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5__ctor_m3A364611F9006E4B60588F25B0DE38B3F0DAC3B7 (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -6162,14 +6769,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5__ctor_m3A364611F9006E4
 		return;
 	}
 }
-// Method Definition Index: 90554
+// Method Definition Index: 90394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5_System_IDisposable_Dispose_m2DFCC56BDD716F97DF7750AA7D4CEDBB9E2520F1 (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 90555
+// Method Definition Index: 90395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadingU3Ed__5_MoveNext_m0D1B5AE013DFEC090DAB46E66734536E78F198F7 (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6209,7 +6816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadingU3Ed__5_MoveNext_m0D1B5AE013DF
 IL_0022:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:21>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:21>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (2.0f), NULL);
 		__this->___U3CU3E2__current = L_3;
@@ -6221,7 +6828,7 @@ IL_0022:
 IL_0042:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:22>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:22>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_4 = V_1;
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_5 = V_1;
 		NullCheck(L_5);
@@ -6239,17 +6846,17 @@ IL_0042:
 IL_0064:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:24>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:24>
 		SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53* L_8 = V_1;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = L_8->___Orange;
 		NullCheck(L_9);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, (bool)0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Scripts/SceneFuncs.cs:26>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Scripts/SceneFuncs.cs:26>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 90556
+// Method Definition Index: 90396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadingU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m42F7971D2D147E144C791DDAB932ECE02AE71BCA (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6257,7 +6864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadingU3Ed__5_System_Colle
 		return L_0;
 	}
 }
-// Method Definition Index: 90557
+// Method Definition Index: 90397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5_System_Collections_IEnumerator_Reset_mE6E27C9E832C169EDC747735339455248D59E98A (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6266,7 +6873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadingU3Ed__5_System_Collections_IEn
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadingU3Ed__5_System_Collections_IEnumerator_Reset_mE6E27C9E832C169EDC747735339455248D59E98A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 90558
+// Method Definition Index: 90398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadingU3Ed__5_System_Collections_IEnumerator_get_Current_m109CE9EFF092C6197BD4502FBD3BBE570833813A (U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6282,11 +6889,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadingU3Ed__5_System_Colle
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90559
+// Method Definition Index: 90399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneTemplate_RotateCube_Update_mAF2FB34B99E325443A80D60A7EB73DC092EAE9A6 (SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:20>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:20>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___objectRotation;
@@ -6299,15 +6906,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneTemplate_RotateCube_Update_mAF2FB34
 		L_5 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_3, L_4, NULL);
 		NullCheck(L_0);
 		Transform_Rotate_m2A308205498AFEEA3DF784B1C86E4F7C126CA2EE(L_0, L_5, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:21>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 90560
+// Method Definition Index: 90400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneTemplate_RotateCube__ctor_mC7E11C05D25FFF6F8D7EA06AAE5598B497365CD2 (SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:10>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Settings/Project Configuration/SceneTemplate_RotateCube.cs:10>
 		__this->___rotateSpeed = (1.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -6321,30 +6928,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneTemplate_RotateCube__ctor_mC7E11C05
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90561
+// Method Definition Index: 90401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____646619EDC2FF29123281665C0C46633B44D57936C727A23B78F34FE2E866520E_FieldInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____C09D1CB63326B3292622120196177561A5E6AA9C0C047403AFC9356D26A91FDC_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____9E89A321074DC32F8CC7BB1EB29D61115FF50E028543A6DF12E060F36B2CE23D_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F50CE14F13CB90A579AD3F58D02DCB13760ED82539BF0F676A9AA65B7C5D975A_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E));
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)475));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)478));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____646619EDC2FF29123281665C0C46633B44D57936C727A23B78F34FE2E866520E_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____9E89A321074DC32F8CC7BB1EB29D61115FF50E028543A6DF12E060F36B2CE23D_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)303));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)307));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____C09D1CB63326B3292622120196177561A5E6AA9C0C047403AFC9356D26A91FDC_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F50CE14F13CB90A579AD3F58D02DCB13760ED82539BF0F676A9AA65B7C5D975A_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
 		(&V_0)->___TypesData = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
@@ -6355,7 +6962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 90562
+// Method Definition Index: 90402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6441,7 +7048,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90563
+// Method Definition Index: 90403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* CutoutMaskUI_get_materialForRendering_m1E481305FA17C6A7AC2A91C9A8BC62CBA40EB21A (CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6452,22 +7059,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:15>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:15>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0;
 		L_0 = Graphic_get_materialForRendering_m4B0017B2B59D2EF578D32ABFCF84A97A835B6B22(__this, NULL);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_1 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		Material__ctor_mFCC42FB90257F1E8F7516A8640A79C465A39961C(L_1, L_0, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:16>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:16>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_2 = L_1;
 		il2cpp_codegen_runtime_class_init_inline(CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2_il2cpp_TypeInfo_var);
 		int32_t L_3 = ((CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2_StaticFields*)il2cpp_codegen_static_fields_for(CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2_il2cpp_TypeInfo_var))->___k_StencilComp;
 		NullCheck(L_2);
 		Material_SetInt_m9C05C9D7C152CFCC48F8572710F89DDAC9277E39(L_2, L_3, 6, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:17>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:17>
 		return L_2;
 	}
 }
-// Method Definition Index: 90564
+// Method Definition Index: 90404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CutoutMaskUI__ctor_m6E3A5D1ED0A30B06735B45E13EE7641085EADE2D (CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6482,7 +7089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CutoutMaskUI__ctor_m6E3A5D1ED0A30B06735B
 		return;
 	}
 }
-// Method Definition Index: 90565
+// Method Definition Index: 90405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CutoutMaskUI__cctor_m3FA8526EBAB8E0DFA5881AEBA12CDA8F6533303B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6493,7 +7100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CutoutMaskUI__cctor_m3FA8526EBAB8E0DFA58
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:9>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/UI/Scripts/CutoutMaskUI.cs:9>
 		int32_t L_0;
 		L_0 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral0F52C788AC4796FE5841155F7DF3896E049C051E, NULL);
 		((CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2_StaticFields*)il2cpp_codegen_static_fields_for(CutoutMaskUI_t331D7742560D4950E00071EF06D12E7CEB17C4C2_il2cpp_TypeInfo_var))->___k_StencilComp = L_0;
@@ -6508,46 +7115,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CutoutMaskUI__cctor_m3FA8526EBAB8E0DFA58
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90566
+// Method Definition Index: 90406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ARFeatheredPlaneMeshVisualizerCompanion_get_planeRenderer_mDCF643A0BFEEAF5E7633C9671B70DB7C4E4366F0 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:20>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:20>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0 = __this->___m_PlaneRenderer;
 		return L_0;
 	}
 }
-// Method Definition Index: 90567
+// Method Definition Index: 90407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_set_planeRenderer_mDB8960380EE4982B885831A0AFD3502D318D50B4 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:21>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:21>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0 = ___0_value;
 		__this->___m_PlaneRenderer = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PlaneRenderer), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 90568
+// Method Definition Index: 90408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ARFeatheredPlaneMeshVisualizerCompanion_get_fadeSpeed_mB402D751AE02B0F2155B4B04408EF29847025580 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:35>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:35>
 		float L_0 = __this->___m_FadeSpeed;
 		return L_0;
 	}
 }
-// Method Definition Index: 90569
+// Method Definition Index: 90409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_set_fadeSpeed_m580ED878B33180397E4112E698B58B9CE66049C0 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:36>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:36>
 		float L_0 = ___0_value;
 		__this->___m_FadeSpeed = L_0;
 		return;
 	}
 }
-// Method Definition Index: 90570
+// Method Definition Index: 90410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_Awake_m92E791FA5CC3548CA80CA21599D1800B19AB534C (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6557,24 +7164,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:53>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:53>
 		int32_t L_0;
 		L_0 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral278DDA87522A9019A0147F14D54301096A99F2D1, NULL);
 		__this->___m_ShaderAlphaPropertyID = L_0;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:54>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:54>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_1 = __this->___m_PlaneRenderer;
 		NullCheck(L_1);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_2;
 		L_2 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_1, NULL);
 		__this->___m_PlaneMaterial = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PlaneMaterial), (void*)L_2);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:55>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:55>
 		ARFeatheredPlaneMeshVisualizerCompanion_set_visualizeSurfaces_m7A7F198C97A315F6F7F58F0BDA5269863F098D68(__this, (bool)1, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:56>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:56>
 		return;
 	}
 }
-// Method Definition Index: 90571
+// Method Definition Index: 90411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_OnDestroy_m64B601920050D7584FAF2D2F1E132CB57A5742BC (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6584,15 +7191,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:63>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:63>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_0 = __this->___m_AlphaTweenableVariable;
 		NullCheck(L_0);
 		TweenableVariableAsyncBase_1_Dispose_m8302D545AD62EB13A85B639B2E21FB71843F0CE0(L_0, TweenableVariableAsyncBase_1_Dispose_m8302D545AD62EB13A85B639B2E21FB71843F0CE0_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:64>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:64>
 		return;
 	}
 }
-// Method Definition Index: 90572
+// Method Definition Index: 90412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_Update_m541F58E1FC27F7D775FE47F2C1B1A04710BC4A27 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6603,34 +7210,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:71>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:71>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_0 = __this->___m_AlphaTweenableVariable;
 		float L_1 = __this->___m_TweenProgress;
 		NullCheck(L_0);
 		TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791(L_0, L_1, TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:72>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:72>
 		float L_2 = __this->___m_TweenProgress;
 		float L_3;
 		L_3 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
 		float L_4 = __this->___m_FadeSpeed;
 		__this->___m_TweenProgress = ((float)il2cpp_codegen_add(L_2, ((float)il2cpp_codegen_multiply(L_3, L_4))));
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:73>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:73>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_5 = __this->___m_AlphaTweenableVariable;
 		NullCheck(L_5);
 		float L_6;
 		L_6 = TweenableVariableAsyncBase_1_get_Value_m5DAFDAB70CA05D176B1C3158F7485F8162F3E8FC(L_5, TweenableVariableAsyncBase_1_get_Value_m5DAFDAB70CA05D176B1C3158F7485F8162F3E8FC_RuntimeMethod_var);
 		__this->___m_SurfaceVisualAlpha = L_6;
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:74>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:74>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_7 = __this->___m_PlaneMaterial;
 		int32_t L_8 = __this->___m_ShaderAlphaPropertyID;
 		float L_9 = __this->___m_SurfaceVisualAlpha;
 		NullCheck(L_7);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_7, L_8, L_9, NULL);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:75>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 90573
+// Method Definition Index: 90413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_set_visualizeSurfaces_m7A7F198C97A315F6F7F58F0BDA5269863F098D68 (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6645,9 +7252,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_
 	float G_B3_0 = 0.0f;
 	FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* G_B3_1 = NULL;
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:84>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:84>
 		__this->___m_TweenProgress = (0.0f);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:85>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:85>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_0 = __this->___m_AlphaTweenableVariable;
 		bool L_1 = ___0_value;
 		if (L_1)
@@ -6673,15 +7280,15 @@ IL_0020:
 	{
 		NullCheck(G_B3_1);
 		TweenableVariableBase_1_set_target_m353B619618455D8C59D23B5D02D69EFB492AAA59(G_B3_1, G_B3_0, TweenableVariableBase_1_set_target_m353B619618455D8C59D23B5D02D69EFB492AAA59_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:86>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:86>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_2 = __this->___m_AlphaTweenableVariable;
 		NullCheck(L_2);
 		TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791(L_2, (0.0f), TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791_RuntimeMethod_var);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:87>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:87>
 		return;
 	}
 }
-// Method Definition Index: 90574
+// Method Definition Index: 90414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion__ctor_m3871FAD2A1135D983A9B5ADCD604F22949DE985C (ARFeatheredPlaneMeshVisualizerCompanion_tDE56FFED5B1D60BF9CFFE40E87360C312EA938E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6691,11 +7298,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFeatheredPlaneMeshVisualizerCompanion_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:27>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:27>
 		__this->___m_FadeSpeed = (1.0f);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:40>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:40>
 		__this->___m_SurfaceVisualAlpha = (1.0f);
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:45>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/MobileARTemplateAssets/Scripts/ARFeatheredPlaneMeshVisualizerCompanion.cs:45>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_0 = (FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48*)il2cpp_codegen_object_new(FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48_il2cpp_TypeInfo_var);
 		FloatTweenableVariable__ctor_mE8A1546D61397EB6D999B82E247996198FB2E776(L_0, NULL);
 		__this->___m_AlphaTweenableVariable = L_0;
@@ -6764,7 +7371,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XRInteractionGroup
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ObjectSpawner_get_objectPrefabs_mC013B08B69C29F13A750E8715FAB01E8681320CF_inline (ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Samples/XR Interaction Toolkit/3.1.1/Starter Assets/Scripts/ObjectSpawner.cs:38>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Samples/XR Interaction Toolkit/3.1.1/Starter Assets/Scripts/ObjectSpawner.cs:38>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___m_ObjectPrefabs;
 		return L_0;
 	}
@@ -6773,7 +7380,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tB951CE80B58D1BF9650862451
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ObjectSpawner_set_spawnOptionIndex_m5984E7B1712BB73A2E982FE4487FCA033A922711_inline (ObjectSpawner_t5ACB5F84845F9E874424BADB585AB17DD4644111* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/i/Desktop/VirtuSphere/Assets/Samples/XR Interaction Toolkit/3.1.1/Starter Assets/Scripts/ObjectSpawner.cs:70>
+		//<source_info:C:/Users/joshlee rash/VirtuSphere/Assets/Samples/XR Interaction Toolkit/3.1.1/Starter Assets/Scripts/ObjectSpawner.cs:70>
 		int32_t L_0 = ___0_value;
 		__this->___m_SpawnOptionIndex = L_0;
 		return;
@@ -6974,6 +7581,31 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonControl_t85949109B98AAF5B7A
 		return L_0;
 	}
 }
+// Method Definition Index: 77883
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ScrollRect_get_viewport_m85092216DD476F77E78F5CE50F9C4E70063ECCF9_inline (ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@f33505fcd0e6/Runtime/UGUI/UI/Core/ScrollRect.cs:292>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___m_Viewport;
+		return L_0;
+	}
+}
+// Method Definition Index: 45600
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_Width;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
 // Method Definition Index: 47236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
@@ -6993,6 +7625,82 @@ IL_0010:
 	{
 		float L_5 = V_0;
 		return L_5;
+	}
+}
+// Method Definition Index: 47231
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		float L_0 = ___0_f;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_1;
+		L_1 = bankers_round(((double)L_0));
+		V_0 = il2cpp_codegen_cast_double_to_int<int32_t>(L_1);
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// Method Definition Index: 47234
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	bool V_1 = false;
+	int32_t V_2 = 0;
+	{
+		int32_t L_0 = ___0_value;
+		int32_t L_1 = ___1_min;
+		V_0 = (bool)((((int32_t)L_0) < ((int32_t)L_1))? 1 : 0);
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		int32_t L_3 = ___1_min;
+		___0_value = L_3;
+		goto IL_0019;
+	}
+
+IL_000e:
+	{
+		int32_t L_4 = ___0_value;
+		int32_t L_5 = ___2_max;
+		V_1 = (bool)((((int32_t)L_4) > ((int32_t)L_5))? 1 : 0);
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		int32_t L_7 = ___2_max;
+		___0_value = L_7;
+	}
+
+IL_0019:
+	{
+		int32_t L_8 = ___0_value;
+		V_2 = L_8;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		int32_t L_9 = V_2;
+		return L_9;
 	}
 }
 // Method Definition Index: 47146
