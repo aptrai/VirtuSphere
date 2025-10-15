@@ -1444,9 +1444,9 @@ MonoBehaviour:
   - {fileID: 412028092691142899, guid: 1ba0dcdf18ac5a14baa0aed900a0badc, type: 3}
   - {fileID: 2366304432929067163, guid: 6c3631d42662ff847849f5efd06c16b9, type: 3}
   - {fileID: 4278263692731187614, guid: c17a66ebf58bc5b4aa6c8f94448594b8, type: 3}
-  - {fileID: 6591791863778875051, guid: 69f568f2d4551d548a3b847d316eef46, type: 3}
+  - {fileID: 20664813268701581, guid: a2c733a011c8f4a4bad16b202fbb5d7e, type: 3}
   - {fileID: 2272399612272287824, guid: 31deaeffc498900479cf9aaae76af2da, type: 3}
-  - {fileID: 3865515452163275902, guid: b41b3030618f8f446acc8cf3cd657af2, type: 3}
+  - {fileID: 1088502196913574134, guid: 60173808fdd6b34428d63f0b80e2dca6, type: 3}
   - {fileID: 5122215741213875276, guid: 87b8b252a60cd9a4ba1769918e2c587f, type: 3}
   m_SpawnVisualizationPrefab: {fileID: 0}
   m_SpawnOptionIndex: 0
@@ -1823,7 +1823,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 769660191372048337, guid: 063cc896506b947c7b2c2ae3beb5868f,
         type: 3}
+      propertyPath: m_text
+      value: Get Started!
+      objectReference: {fileID: 0}
+    - target: {fileID: 769660191372048337, guid: 063cc896506b947c7b2c2ae3beb5868f,
+        type: 3}
       propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 769660191372048337, guid: 063cc896506b947c7b2c2ae3beb5868f,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1579366325745436317, guid: 063cc896506b947c7b2c2ae3beb5868f,
@@ -1835,6 +1845,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Continue Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779608150239002450, guid: 063cc896506b947c7b2c2ae3beb5868f,
+        type: 3}
+      propertyPath: m_text
+      value: Welcome to the VirtuSphere!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779608150239002450, guid: 063cc896506b947c7b2c2ae3beb5868f,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 7.813899
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779608150239002450, guid: 063cc896506b947c7b2c2ae3beb5868f,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5865099264268480235, guid: 063cc896506b947c7b2c2ae3beb5868f,
         type: 3}
@@ -3300,7 +3325,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1903666075, guid: a7f75eb0ac450cb4ba964b6d18ab200d, type: 3}
+  m_Sprite: {fileID: -1798199585, guid: c981a63255fe96e4598933ab469ca3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4018,7 +4043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -594456830, guid: c0d57974aa9c48443a2a0b82b596da22, type: 3}
+  m_Sprite: {fileID: 214186052, guid: 45948ec5cd18095478f7b7e3163398aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
