@@ -6958,7 +6958,7 @@ struct U3CU3Ec__DisplayClass3_0_t64DA3376B186E80257876895970EBCA4F4D4D192  : pub
 {
 	String_t* ___key;
 };
-struct U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4  : public RuntimeObject
+struct U3CFadeOutU3Ed__9_t06D96AF3FB9B64FC51892F96DF2E2742A3FA34E4  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -6967,7 +6967,7 @@ struct U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4  : public Run
 	float ___U3CstartAlphaU3E5__3;
 	float ___U3CfadeDurationU3E5__4;
 };
-struct U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C  : public RuntimeObject
+struct U3CLoadingU3Ed__7_t7FF3287FE62CF547DC9AB178B992680EF2312DAE  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -53848,6 +53848,7 @@ struct CarouselManager_tA9B70882207849E4BE836C0676FBC4E176E05474  : public MonoB
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indicatorContainer;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicatorPrefab;
 	float ___scrollSpeed;
+	float ___swipeThreshold;
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___indicators;
 	int32_t ___pageCount;
 	float ___pageWidth;
@@ -54355,6 +54356,8 @@ struct SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53  : public MonoBehavi
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Orange;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Main;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Catalog;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Tutorial;
 	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___Fade;
 	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___Logo;
 };
@@ -72528,9 +72531,9 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize10695 = { sizeof(CarouselMan
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize10696;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize10696 = { sizeof(PreviewScript_t04A74CB56C71758DF694DFC69108E1CF7FAFB48E), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize10697;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize10697 = { sizeof(U3CFadeOutU3Ed__7_tC5292F7D691FD51B6C6487DC4AAE35D8D160D8C4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize10697 = { sizeof(U3CFadeOutU3Ed__9_t06D96AF3FB9B64FC51892F96DF2E2742A3FA34E4), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize10698;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize10698 = { sizeof(U3CLoadingU3Ed__5_t12CB1C66D15ABC0DA794A9B19F87B5528CA1FA3C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize10698 = { sizeof(U3CLoadingU3Ed__7_t7FF3287FE62CF547DC9AB178B992680EF2312DAE), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize10699;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize10699 = { sizeof(SceneFuncs_tFD185D54E90DFC4E90C33F09150986C32628FB53), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize10700;

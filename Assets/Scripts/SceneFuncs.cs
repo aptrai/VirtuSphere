@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class SceneFuncs : MonoBehaviour
 {
     public GameObject Orange;
     public GameObject Main;
+    public GameObject Catalog;
+    public GameObject Tutorial;
     public CanvasGroup Fade;
     public CanvasGroup Logo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,9 +53,33 @@ public class SceneFuncs : MonoBehaviour
         Fade.alpha = 0f;
     }
 
+    public void OpenCatalog()
+    {
+        Main.SetActive(false);
+        Catalog.SetActive(true);
+    }
+    
+    public void BackToMenu()
+    {
+        Main.SetActive(true);
+        Catalog.SetActive(false);
+        Tutorial.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if(SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                BackToMenu();
+            }
+            else if(SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                SceneManager.LoadScene(0);
+            }
+            
+        }
     }
 }
