@@ -11,21 +11,23 @@ public class SceneFuncs : MonoBehaviour
     public GameObject Tutorial;
     public CanvasGroup Fade;
     public CanvasGroup Logo;
+    public GameObject TouchProt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Orange.SetActive(true);
         Main.SetActive(true);
-
+        Tutorial.SetActive(false);
         StartCoroutine(Loading());
     }
 
-    private IEnumerator Loading() {
+    private IEnumerator Loading()
+    {
         yield return new WaitForSeconds(2);
         yield return StartCoroutine(FadeOut());
 
         Orange.SetActive(false);
-        
+
     }
 
     public void arMode()
@@ -58,7 +60,11 @@ public class SceneFuncs : MonoBehaviour
         Main.SetActive(false);
         Catalog.SetActive(true);
     }
-    
+    public void OpenTutorial()
+    {
+        Tutorial.SetActive(true);
+        TouchProt.SetActive(true);
+    }
     public void BackToMenu()
     {
         Main.SetActive(true);
@@ -69,17 +75,22 @@ public class SceneFuncs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Tutorial.activeSelf == false)
         {
-            if(SceneManager.GetActiveScene().buildIndex == 0)
+            TouchProt.SetActive(false);
+        }
+
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 BackToMenu();
             }
-            else if(SceneManager.GetActiveScene().buildIndex == 1)
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 SceneManager.LoadScene(0);
             }
-            
+
         }
     }
 }
