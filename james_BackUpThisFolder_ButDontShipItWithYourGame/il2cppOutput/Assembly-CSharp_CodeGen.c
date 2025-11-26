@@ -82,6 +82,9 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mABE95FF2334C1607DCD0F8EB0A9A7
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5FCEEE9A8231F83F1EC75CF9C626815CEBA1E751 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m1B7293799D7B9FEEFD4125924CA90DDA0488B21C (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_m32915AC988ADACC69CBD8486A12AF1B0F2CBAC4B (void);
+extern void Back2Menu_Start_m62EB81BBB1A0EC1F19BE91425C6189FD507A5DA9 (void);
+extern void Back2Menu_Update_mDFF18DA6471E51CA631ECD73E92F72E698DC0853 (void);
+extern void Back2Menu__ctor_m3557A9061A01A9F431825A07F2B99D01D25BF315 (void);
 extern void CarouselManager_Start_m313AF893A56549C1D0CBD8000BB4DC1B55A063AC (void);
 extern void CarouselManager_Update_m1A0BCF947CD571E0B85FEDC46DE6C57AEA1E5093 (void);
 extern void CarouselManager_OnEndDrag_m09446ABFDF33C8B24E2A63138B9FB6257C8131CC (void);
@@ -91,6 +94,9 @@ extern void CarouselManager_SetTargetPage_m2B7DF1BCE4E867AA76EAA7104BB08C99733A3
 extern void CarouselManager_SetupIndicators_m2C879D35D3925E44A126757B8D73EAB683CD6DBA (void);
 extern void CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335 (void);
 extern void CarouselManager__ctor_m4D3F2C90942FF4DD05EF13277E9E9A7DCB089097 (void);
+extern void CatDesc_DisplayPicture_mF3F859F5F47732A660A03198859538D1F76FA1C0 (void);
+extern void CatDesc_ClosePicture_mCD20E8E9249E0B2335512A0DDE72036474C47C1D (void);
+extern void CatDesc__ctor_m2D63281AFFE9FEED2453D80554D26B8687F38972 (void);
 extern void PreviewScript_Start_m774C339101CE5C8751903D89F2A28E1D473B7E7D (void);
 extern void PreviewScript_Update_m433C23C56FFDEB94220BA8CFEE3407BEC313CB5F (void);
 extern void PreviewScript__ctor_m5E887854843886E4078B19350C359BFF3ABBF376 (void);
@@ -137,7 +143,7 @@ extern void ARFeatheredPlaneMeshVisualizerCompanion_OnDestroy_m64B601920050D7584
 extern void ARFeatheredPlaneMeshVisualizerCompanion_Update_m541F58E1FC27F7D775FE47F2C1B1A04710BC4A27 (void);
 extern void ARFeatheredPlaneMeshVisualizerCompanion_set_visualizeSurfaces_m7A7F198C97A315F6F7F58F0BDA5269863F098D68 (void);
 extern void ARFeatheredPlaneMeshVisualizerCompanion__ctor_m3871FAD2A1135D983A9B5ADCD604F22949DE985C (void);
-static Il2CppMethodPointer s_methodPointers[130] = 
+static Il2CppMethodPointer s_methodPointers[136] = 
 {
 	ARTemplateMenuManager_get_createButton_mF094F0AC7A89F9C92C57D8517519509825A145E4,
 	ARTemplateMenuManager_set_createButton_mD65905DD827D87E747095FDAF9CE38892C4340EB,
@@ -214,6 +220,9 @@ static Il2CppMethodPointer s_methodPointers[130] =
 	U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5FCEEE9A8231F83F1EC75CF9C626815CEBA1E751,
 	U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m1B7293799D7B9FEEFD4125924CA90DDA0488B21C,
 	U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_m32915AC988ADACC69CBD8486A12AF1B0F2CBAC4B,
+	Back2Menu_Start_m62EB81BBB1A0EC1F19BE91425C6189FD507A5DA9,
+	Back2Menu_Update_mDFF18DA6471E51CA631ECD73E92F72E698DC0853,
+	Back2Menu__ctor_m3557A9061A01A9F431825A07F2B99D01D25BF315,
 	CarouselManager_Start_m313AF893A56549C1D0CBD8000BB4DC1B55A063AC,
 	CarouselManager_Update_m1A0BCF947CD571E0B85FEDC46DE6C57AEA1E5093,
 	CarouselManager_OnEndDrag_m09446ABFDF33C8B24E2A63138B9FB6257C8131CC,
@@ -223,6 +232,9 @@ static Il2CppMethodPointer s_methodPointers[130] =
 	CarouselManager_SetupIndicators_m2C879D35D3925E44A126757B8D73EAB683CD6DBA,
 	CarouselManager_UpdateIndicators_m12420E2EE4D1030CD059D2CCFE4F9F63C0B4C335,
 	CarouselManager__ctor_m4D3F2C90942FF4DD05EF13277E9E9A7DCB089097,
+	CatDesc_DisplayPicture_mF3F859F5F47732A660A03198859538D1F76FA1C0,
+	CatDesc_ClosePicture_mCD20E8E9249E0B2335512A0DDE72036474C47C1D,
+	CatDesc__ctor_m2D63281AFFE9FEED2453D80554D26B8687F38972,
 	PreviewScript_Start_m774C339101CE5C8751903D89F2A28E1D473B7E7D,
 	PreviewScript_Update_m433C23C56FFDEB94220BA8CFEE3407BEC313CB5F,
 	PreviewScript__ctor_m5E887854843886E4078B19350C359BFF3ABBF376,
@@ -275,7 +287,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x06000030, Goal__ctor_m1545B6E40E910D8B0648797BF96520F84FF2FF40_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[130] = 
+static const int32_t s_InvokerIndices[136] = 
 {
 	16127,
 	12437,
@@ -354,11 +366,17 @@ static const int32_t s_InvokerIndices[130] =
 	16127,
 	16327,
 	16327,
+	16327,
+	16327,
+	16327,
 	12437,
 	16327,
 	16327,
 	12369,
 	16327,
+	16327,
+	16327,
+	12369,
 	16327,
 	16327,
 	16327,
@@ -412,7 +430,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	130,
+	136,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

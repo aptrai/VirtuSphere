@@ -86,11 +86,6 @@ public class SceneFuncs : MonoBehaviour
             {
                 BackToMenu();
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                SceneManager.LoadScene(0);
-            }
-
         }
     }
 }
